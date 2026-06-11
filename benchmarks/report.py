@@ -68,7 +68,7 @@ def generate_report(models: dict) -> str:
     lines.append("")
 
     # Speed details
-    lines.append("## Speed (PP = prefill, TG = generation @ 128k ctx, 512 tok)\n")
+    lines.append("## Speed (PP = prefill, TG = generation, 512 tok)\n")
     lines.append("| Model | PP tok/s | TG tok/s | NGL | Notes |")
     lines.append("|-------|----------|----------|-----|-------|")
     for model_id, data in models.items():
@@ -78,12 +78,14 @@ def generate_report(models: dict) -> str:
         pp = format_val(s.get("pp_tps"), "{:.1f}")
         tg = format_val(s.get("tg_tps"), "{:.1f}")
         ngl = s.get("ngl", "—")
-        note = "CPU offload" if s.get("ngl", 99) < 99 else "Full GPU"
+        gpu_note = "CPU offload" if s.get("ngl", 99) < 99 else "Full GPU"
+        ctx_note = "128k ctx" if s.get("fit_min_ctx") == 131072 else "legacy speed"
+        note = f"{gpu_note}; {ctx_note}"
         lines.append(f"| {model_id} | {pp} | {tg} | {ngl} | {note} |")
     lines.append("")
 
     # Tool calling details
-    lines.append("## Agentic Tool Calling (25 tests)\n")
+    lines.append("## Agentic Tool Calling (30 tests)\n")
     lines.append("| Model | Tool acc | Param acc | No-tool acc | Overall |")
     lines.append("|-------|----------|-----------|-------------|---------|")
     for model_id, data in models.items():
