@@ -73,6 +73,15 @@ $MODELS = @(
         cpu_offload = $false
     },
     @{
+        id          = "omnicoder-9b-q5km"
+        display     = "Tesslate/OmniCoder-9B Q5_K_M"
+        file        = "omnicoder-9b-q5km\omnicoder-9b-q5_k_m.gguf"
+        ngl         = 99
+        ctx         = 131072
+        threads     = 8
+        cpu_offload = $false
+    },
+    @{
         id          = "qwopus35-9b-coder-mtp-q4km"
         display     = "Jackrong/Qwopus3.5-9B-Coder-MTP"
         file        = "qwopus35-9b-coder-q4km\Qwopus3.5-9B-Coder-MTP-Q4_K_M.gguf"
@@ -100,6 +109,15 @@ $MODELS = @(
         cpu_offload = $false
     },
     @{
+        id          = "qwen35-9b-opus-distill-q5km"
+        display     = "Jackrong/Qwen3.5-9B Claude Opus Distill Q5_K_M"
+        file        = "qwen35-9b-opus-distill-q5km\Qwen3.5-9B.Q5_K_M.gguf"
+        ngl         = 99
+        ctx         = 131072
+        threads     = 8
+        cpu_offload = $false
+    },
+    @{
         id          = "lfm25-8b-q6km"
         display     = "LiquidAI/LFM2.5-8B-A1B"
         file        = "lfm25-8b-q6km\LFM2.5-8B-A1B-Q6_K.gguf"
@@ -109,9 +127,27 @@ $MODELS = @(
         cpu_offload = $false
     },
     @{
+        id          = "lfm25-8b-q8"
+        display     = "LiquidAI/LFM2.5-8B-A1B Q8_0"
+        file        = "lfm25-8b-q8\LFM2.5-8B-A1B-Q8_0.gguf"
+        ngl         = 99
+        ctx         = 131072
+        threads     = 8
+        cpu_offload = $false
+    },
+    @{
         id          = "qwen35-9b-glm51-q4km"
         display     = "Jackrong/Qwen3.5-9B GLM5.1 Distill"
         file        = "qwen35-9b-glm51-distill-q4km\Qwen3.5-9B-GLM5.1-Distill-v1-Q4_K_M.gguf"
+        ngl         = 99
+        ctx         = 131072
+        threads     = 8
+        cpu_offload = $false
+    },
+    @{
+        id          = "qwen35-9b-glm51-distill-q5km"
+        display     = "Jackrong/Qwen3.5-9B GLM5.1 Distill Q5_K_M"
+        file        = "qwen35-9b-glm51-distill-q5km\Qwen3.5-9B-GLM5.1-Distill-v1-Q5_K_M.gguf"
         ngl         = 99
         ctx         = 131072
         threads     = 8

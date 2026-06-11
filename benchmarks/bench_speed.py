@@ -28,8 +28,9 @@ def find_llama_bench() -> Path:
 
 def run_bench(model: Path, ngl: int, ctx: int, threads: int, prompt_tokens: int = 512, gen_tokens: int = 512, reps: int = 1) -> dict:
     bench = find_llama_bench()
-    # llama-bench does not have -c; context = prompt + gen
-    # Use -pg for combined pp+tg test, or separate -p/-n passes
+    # This llama-bench build has no direct -c flag. The fit path lets us
+    # enforce a minimum context allocation with -fitt/-fitc.
+    # Use separate -p/-n passes for PP/TG.
     # Note: -fa uses on/off/auto, not 0/1
     cmd = [
         str(bench),
@@ -41,6 +42,8 @@ def run_bench(model: Path, ngl: int, ctx: int, threads: int, prompt_tokens: int 
         "-fa", "on",
         "-ctk", "q8_0",
         "-ctv", "q8_0",
+        "-fitt", "0",
+        "-fitc", str(ctx),
         "-o", "json",
         "-r", str(reps),
     ]
@@ -104,6 +107,8 @@ def run_bench(model: Path, ngl: int, ctx: int, threads: int, prompt_tokens: int 
         "tg_ms": tg_ms,
         "ngl": ngl,
         "ctx": ctx,
+        "fit_target": 0,
+        "fit_min_ctx": ctx,
         "prompt_tokens": prompt_tokens,
         "gen_tokens": gen_tokens,
         "reps": reps,
@@ -130,6 +135,8 @@ def _parse_table_output(stdout: str, model: Path, ngl: int, ctx: int) -> dict:
         "tg_ms": None,
         "ngl": ngl,
         "ctx": ctx,
+        "fit_target": 0,
+        "fit_min_ctx": ctx,
         "raw": stdout[:4000],
         "timestamp": datetime.now().isoformat(),
     }
