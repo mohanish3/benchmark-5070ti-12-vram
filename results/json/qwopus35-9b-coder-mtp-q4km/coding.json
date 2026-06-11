@@ -1,0 +1,168 @@
+{
+  "pass_at_1": 0.75,
+  "n_passed": 15,
+  "n_total": 20,
+  "details": [
+    {
+      "id": "HE/0",
+      "name": "has_close_elements",
+      "passed": true,
+      "error": "",
+      "latency_s": 7.31,
+      "generated_code": "for i in range(len(numbers)):\n    for j in range(i + 1, len(numbers)):\n        if abs(numbers[i] - numbers[j]) < threshold:\n            return True\nreturn False"
+    },
+    {
+      "id": "HE/3",
+      "name": "below_zero",
+      "passed": true,
+      "error": "",
+      "latency_s": 4.51,
+      "generated_code": "balance = 0\nfor op in operations:\n    balance += op\n    if balance < 0:\n        return True\nreturn False"
+    },
+    {
+      "id": "HE/6",
+      "name": "parse_nested_parens",
+      "passed": true,
+      "error": "",
+      "latency_s": 12.28,
+      "generated_code": "def parse_nested_parens(paren_string: str) -> List[int]:\n    groups = paren_string.split()\n    result = []\n    for group in groups:\n        depth = 0\n        max_depth = 0\n        for char in group:\n            if char == '(':\n                depth += 1\n            elif char == ')':\n                depth -= 1\n            max_depth = max(max_depth, depth)\n        result.append(max_depth)\n    return result"
+    },
+    {
+      "id": "HE/9",
+      "name": "rolling_max",
+      "passed": true,
+      "error": "",
+      "latency_s": 8.53,
+      "generated_code": "result = []\nmax_val = float('-inf')\nfor num in numbers:\n    max_val = max(max_val, num)\n    result.append(max_val)\nreturn result"
+    },
+    {
+      "id": "HE/14",
+      "name": "all_prefixes",
+      "passed": true,
+      "error": "",
+      "latency_s": 6.03,
+      "generated_code": "result = []\nfor i in range(1, len(string) + 1):\n    result.append(string[:i])\nreturn result"
+    },
+    {
+      "id": "HE/17",
+      "name": "parse_music",
+      "passed": true,
+      "error": "",
+      "latency_s": 8.72,
+      "generated_code": "def parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    result = []\n    for note in notes:\n        if note == 'o':\n            result.append(4)\n        elif note == 'o|':\n            result.append(2)\n        elif note == '.|':\n            result.append(1)\n    return result"
+    },
+    {
+      "id": "HE/20",
+      "name": "find_closest_elements",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmp743ibwf9.py\", line 11, in <module>\n    assert find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2]) == (2.0, 2.2)\nAssertionError\n",
+      "latency_s": 27.79,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/23",
+      "name": "strlen",
+      "passed": true,
+      "error": "",
+      "latency_s": 2.45,
+      "generated_code": "return len(string)"
+    },
+    {
+      "id": "HE/24",
+      "name": "largest_divisor",
+      "passed": true,
+      "error": "",
+      "latency_s": 13.05,
+      "generated_code": "if n == 1:\n    return 1\nif n % 2 == 0:\n    return n // 2\ni = 3\nwhile i * i <= n:\n    if n % i == 0:\n        return n // i\n    i += 2\nreturn 1"
+    },
+    {
+      "id": "HE/26",
+      "name": "remove_duplicates",
+      "passed": true,
+      "error": "",
+      "latency_s": 4.34,
+      "generated_code": "from collections import Counter\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    counts = Counter(numbers)\n    return [num for num in numbers if counts[num] == 1]"
+    },
+    {
+      "id": "HE/28",
+      "name": "concatenate",
+      "passed": true,
+      "error": "",
+      "latency_s": 2.58,
+      "generated_code": "return \"\".join(strings)"
+    },
+    {
+      "id": "HE/32",
+      "name": "poly_zero",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmpioece2rn.py\", line 16, in <module>\n    assert math.isclose(poly([1, 2], find_zero([1, 2])), 0, abs_tol=1e-3)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"%TEMP%\\tmpioece2rn.py\", line 4, in poly\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n                        ^^^^^^^^^^^^^^\nTypeError: must be real number, not NoneType\n",
+      "latency_s": 27.67,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/33",
+      "name": "sort_third",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmp3_tnxecm.py\", line 13, in <module>\n    assert sort_third([1, 2, 3]) == [1, 2, 3]\nAssertionError\n",
+      "latency_s": 27.64,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/36",
+      "name": "fizz_buzz",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmp08zhbu6m.py\", line 13, in <module>\n    assert fizz_buzz(50) == 0\nAssertionError\n",
+      "latency_s": 27.65,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/41",
+      "name": "car_race_collision",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmp0837vo5u.py\", line 9, in <module>\n    assert car_race_collision(2) == 4\nAssertionError\n",
+      "latency_s": 27.59,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/44",
+      "name": "change_base",
+      "passed": true,
+      "error": "",
+      "latency_s": 9.45,
+      "generated_code": "if x == 0:\n    return \"0\"\nresult = \"\"\nwhile x > 0:\n    result = str(x % base) + result\n    x //= base\nreturn result"
+    },
+    {
+      "id": "HE/50",
+      "name": "encode_shift",
+      "passed": true,
+      "error": "",
+      "latency_s": 16.74,
+      "generated_code": "def decode_shift(s: str) -> str:\n    \"\"\"Decode a string encoded with encode_shift.\n    >>> decode_shift(encode_shift('hello'))\n    'hello'\n    \"\"\"\n    return ''.join([chr(((ord(ch) - 5 - ord('a')) % 26) + ord('a')) if ch.isalpha() and ch.islower() else ch for ch in s])"
+    },
+    {
+      "id": "HE/51",
+      "name": "remove_vowels",
+      "passed": true,
+      "error": "",
+      "latency_s": 3.39,
+      "generated_code": "vowels = set('aeiouAEIOU')\nreturn ''.join(c for c in text if c not in vowels)"
+    },
+    {
+      "id": "HE/58",
+      "name": "common",
+      "passed": true,
+      "error": "",
+      "latency_s": 4.51,
+      "generated_code": "return sorted(list(set(l1) & set(l2)))"
+    },
+    {
+      "id": "HE/62",
+      "name": "derivative",
+      "passed": true,
+      "error": "",
+      "latency_s": 17.18,
+      "generated_code": "return [i * xs[i] for i in range(1, len(xs))]"
+    }
+  ],
+  "timestamp": "2026-06-11T17:42:01.639039"
+}

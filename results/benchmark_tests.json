@@ -1,0 +1,507 @@
+{
+  "speed": {
+    "prompt_tokens": 512,
+    "gen_tokens": 512,
+    "reps": 3,
+    "ngl": 99,
+    "ctx": 131072,
+    "threads": 8
+  },
+  "toolcall": {
+    "n_tests": 30,
+    "multi_tool_ids": [
+      "T26",
+      "T27",
+      "T28",
+      "T29",
+      "T30"
+    ],
+    "tests": [
+      {
+        "id": "T01",
+        "desc": "weather lookup",
+        "user": "What's the weather like in Tokyo right now?",
+        "no_tool": false,
+        "expect_tool": "get_weather",
+        "expect_tools": null,
+        "tool_names": [
+          "get_weather",
+          "search_web",
+          "get_current_time"
+        ]
+      },
+      {
+        "id": "T02",
+        "desc": "arithmetic calculation",
+        "user": "What is 17 multiplied by 23?",
+        "no_tool": false,
+        "expect_tool": "calculate",
+        "expect_tools": null,
+        "tool_names": [
+          "calculate",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T03",
+        "desc": "web search",
+        "user": "Find recent research papers on large language models published in 2024",
+        "no_tool": false,
+        "expect_tool": "search_web",
+        "expect_tools": null,
+        "tool_names": [
+          "search_web",
+          "get_definition"
+        ]
+      },
+      {
+        "id": "T04",
+        "desc": "stock price",
+        "user": "What is the current stock price of Tesla?",
+        "no_tool": false,
+        "expect_tool": "get_stock_price",
+        "expect_tools": null,
+        "tool_names": [
+          "get_stock_price",
+          "search_web",
+          "calculate"
+        ]
+      },
+      {
+        "id": "T05",
+        "desc": "translation",
+        "user": "Translate 'good morning' to French",
+        "no_tool": false,
+        "expect_tool": "translate",
+        "expect_tools": null,
+        "tool_names": [
+          "translate",
+          "search_web",
+          "get_definition"
+        ]
+      },
+      {
+        "id": "T06",
+        "desc": "unit conversion",
+        "user": "Convert 100 kilometers to miles",
+        "no_tool": false,
+        "expect_tool": "convert_units",
+        "expect_tools": null,
+        "tool_names": [
+          "convert_units",
+          "calculate",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T07",
+        "desc": "timezone time",
+        "user": "What time is it in Tokyo right now?",
+        "no_tool": false,
+        "expect_tool": "get_current_time",
+        "expect_tools": null,
+        "tool_names": [
+          "get_current_time",
+          "get_weather",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T08",
+        "desc": "set reminder",
+        "user": "Set a reminder to take my medicine at 8pm tonight",
+        "no_tool": false,
+        "expect_tool": "set_reminder",
+        "expect_tools": null,
+        "tool_names": [
+          "set_reminder",
+          "create_calendar_event",
+          "send_email"
+        ]
+      },
+      {
+        "id": "T09",
+        "desc": "send email",
+        "user": "Send an email to alice@example.com with subject 'Project Update' saying the deadline has moved to Friday",
+        "no_tool": false,
+        "expect_tool": "send_email",
+        "expect_tools": null,
+        "tool_names": [
+          "send_email",
+          "create_calendar_event",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T10",
+        "desc": "create calendar event",
+        "user": "Schedule a dentist appointment for next Monday at 2pm",
+        "no_tool": false,
+        "expect_tool": "create_calendar_event",
+        "expect_tools": null,
+        "tool_names": [
+          "create_calendar_event",
+          "set_reminder",
+          "send_email"
+        ]
+      },
+      {
+        "id": "T11",
+        "desc": "read file",
+        "user": "Read the file at /var/log/app.log",
+        "no_tool": false,
+        "expect_tool": "read_file",
+        "expect_tools": null,
+        "tool_names": [
+          "read_file",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T12",
+        "desc": "random number",
+        "user": "Give me a random number between 1 and 100",
+        "no_tool": false,
+        "expect_tool": "random_number",
+        "expect_tools": null,
+        "tool_names": [
+          "random_number",
+          "calculate"
+        ]
+      },
+      {
+        "id": "T13",
+        "desc": "word definition",
+        "user": "What does 'ephemeral' mean?",
+        "no_tool": false,
+        "expect_tool": "get_definition",
+        "expect_tools": null,
+        "tool_names": [
+          "get_definition",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T14",
+        "desc": "currency conversion",
+        "user": "How much is 500 US dollars in euros?",
+        "no_tool": false,
+        "expect_tool": "convert_currency",
+        "expect_tools": null,
+        "tool_names": [
+          "convert_currency",
+          "convert_units",
+          "calculate"
+        ]
+      },
+      {
+        "id": "T15",
+        "desc": "geocode",
+        "user": "What are the GPS coordinates of the Eiffel Tower?",
+        "no_tool": false,
+        "expect_tool": "geocode",
+        "expect_tools": null,
+        "tool_names": [
+          "geocode",
+          "search_web",
+          "get_weather"
+        ]
+      },
+      {
+        "id": "T16",
+        "desc": "percent calculation",
+        "user": "What is 15 percent of 840?",
+        "no_tool": false,
+        "expect_tool": "calculate",
+        "expect_tools": null,
+        "tool_names": [
+          "calculate",
+          "search_web",
+          "convert_units"
+        ]
+      },
+      {
+        "id": "T17",
+        "desc": "weather units",
+        "user": "What is the weather in Berlin in Celsius?",
+        "no_tool": false,
+        "expect_tool": "get_weather",
+        "expect_tools": null,
+        "tool_names": [
+          "get_weather",
+          "get_current_time"
+        ]
+      },
+      {
+        "id": "T18",
+        "desc": "translate Japanese",
+        "user": "How do you say 'goodbye' in Japanese?",
+        "no_tool": false,
+        "expect_tool": "translate",
+        "expect_tools": null,
+        "tool_names": [
+          "translate",
+          "search_web",
+          "get_definition"
+        ]
+      },
+      {
+        "id": "T19",
+        "desc": "temperature conversion",
+        "user": "What is 37 degrees Celsius in Fahrenheit?",
+        "no_tool": false,
+        "expect_tool": "convert_units",
+        "expect_tools": null,
+        "tool_names": [
+          "convert_units",
+          "calculate",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T20",
+        "desc": "Sydney time",
+        "user": "Is it currently night time in Sydney, Australia?",
+        "no_tool": false,
+        "expect_tool": "get_current_time",
+        "expect_tools": null,
+        "tool_names": [
+          "get_current_time",
+          "get_weather"
+        ]
+      },
+      {
+        "id": "T21",
+        "desc": "no-tool: basic math",
+        "user": "What is 2 plus 2?",
+        "no_tool": true,
+        "expect_tool": null,
+        "expect_tools": null,
+        "tool_names": [
+          "get_weather",
+          "search_web",
+          "calculate"
+        ]
+      },
+      {
+        "id": "T22",
+        "desc": "no-tool: factual",
+        "user": "Who wrote the play Hamlet?",
+        "no_tool": true,
+        "expect_tool": null,
+        "expect_tools": null,
+        "tool_names": [
+          "search_web",
+          "get_definition"
+        ]
+      },
+      {
+        "id": "T23",
+        "desc": "no-tool: list",
+        "user": "List the planets in our solar system in order from the sun",
+        "no_tool": true,
+        "expect_tool": null,
+        "expect_tools": null,
+        "tool_names": [
+          "search_web",
+          "geocode"
+        ]
+      },
+      {
+        "id": "T24",
+        "desc": "optional param",
+        "user": "Search for Python tutorials and show me the top 5 results",
+        "no_tool": false,
+        "expect_tool": "search_web",
+        "expect_tools": null,
+        "tool_names": [
+          "search_web",
+          "get_definition"
+        ]
+      },
+      {
+        "id": "T25",
+        "desc": "enum param",
+        "user": "Switch the interface to Spanish",
+        "no_tool": false,
+        "expect_tool": "set_language",
+        "expect_tools": null,
+        "tool_names": [
+          "set_language",
+          "translate"
+        ]
+      },
+      {
+        "id": "T26",
+        "desc": "multi-tool: weather and time",
+        "user": "Tell me the weather in Tokyo and the current time there.",
+        "no_tool": false,
+        "expect_tool": null,
+        "expect_tools": [
+          "get_weather",
+          "get_current_time"
+        ],
+        "tool_names": [
+          "get_weather",
+          "get_current_time",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T27",
+        "desc": "multi-tool: stock and currency",
+        "user": "Get Apple's stock price and convert 100 USD to EUR.",
+        "no_tool": false,
+        "expect_tool": null,
+        "expect_tools": [
+          "get_stock_price",
+          "convert_currency"
+        ],
+        "tool_names": [
+          "get_stock_price",
+          "convert_currency",
+          "calculate",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T28",
+        "desc": "multi-tool: email and calendar",
+        "user": "Email bob@example.com about the budget review and schedule a budget review meeting for Friday at 10am.",
+        "no_tool": false,
+        "expect_tool": null,
+        "expect_tools": [
+          "send_email",
+          "create_calendar_event"
+        ],
+        "tool_names": [
+          "send_email",
+          "create_calendar_event",
+          "set_reminder"
+        ]
+      },
+      {
+        "id": "T29",
+        "desc": "multi-tool: geocode and weather",
+        "user": "Find the coordinates of the Eiffel Tower and get the weather in Paris.",
+        "no_tool": false,
+        "expect_tool": null,
+        "expect_tools": [
+          "geocode",
+          "get_weather"
+        ],
+        "tool_names": [
+          "geocode",
+          "get_weather",
+          "search_web"
+        ]
+      },
+      {
+        "id": "T30",
+        "desc": "multi-tool: reminder and unit conversion",
+        "user": "Convert 5 miles to kilometers and remind me at 6pm to log the result.",
+        "no_tool": false,
+        "expect_tool": null,
+        "expect_tools": [
+          "convert_units",
+          "set_reminder"
+        ],
+        "tool_names": [
+          "convert_units",
+          "set_reminder",
+          "calculate"
+        ]
+      }
+    ]
+  },
+  "coding": {
+    "n_problems": 20,
+    "problems": [
+      {
+        "id": "HE/0",
+        "name": "has_close_elements"
+      },
+      {
+        "id": "HE/3",
+        "name": "below_zero"
+      },
+      {
+        "id": "HE/6",
+        "name": "parse_nested_parens"
+      },
+      {
+        "id": "HE/9",
+        "name": "rolling_max"
+      },
+      {
+        "id": "HE/14",
+        "name": "all_prefixes"
+      },
+      {
+        "id": "HE/17",
+        "name": "parse_music"
+      },
+      {
+        "id": "HE/20",
+        "name": "find_closest_elements"
+      },
+      {
+        "id": "HE/23",
+        "name": "strlen"
+      },
+      {
+        "id": "HE/24",
+        "name": "largest_divisor"
+      },
+      {
+        "id": "HE/26",
+        "name": "remove_duplicates"
+      },
+      {
+        "id": "HE/28",
+        "name": "concatenate"
+      },
+      {
+        "id": "HE/32",
+        "name": "poly_zero"
+      },
+      {
+        "id": "HE/33",
+        "name": "sort_third"
+      },
+      {
+        "id": "HE/36",
+        "name": "fizz_buzz"
+      },
+      {
+        "id": "HE/41",
+        "name": "car_race_collision"
+      },
+      {
+        "id": "HE/44",
+        "name": "change_base"
+      },
+      {
+        "id": "HE/50",
+        "name": "encode_shift"
+      },
+      {
+        "id": "HE/51",
+        "name": "remove_vowels"
+      },
+      {
+        "id": "HE/58",
+        "name": "common"
+      },
+      {
+        "id": "HE/62",
+        "name": "derivative"
+      }
+    ]
+  },
+  "reasoning": {
+    "dataset": "gsm8k/main test split",
+    "limit": 50,
+    "fallback_limit": 20
+  }
+}

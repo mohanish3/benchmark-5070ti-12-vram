@@ -1,0 +1,682 @@
+{
+  "tool_accuracy": 0.8148,
+  "param_accuracy": 0.8148,
+  "no_tool_accuracy": 1.0,
+  "overall_score": 0.8333,
+  "n_tests": 30,
+  "n_tool_tests": 27,
+  "n_no_tool_tests": 3,
+  "details": [
+    {
+      "id": "T01",
+      "desc": "weather lookup",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather"
+      ],
+      "expected_tool": "get_weather",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "city": {
+          "value": "Tokyo",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.51
+    },
+    {
+      "id": "T02",
+      "desc": "arithmetic calculation",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": "calculate",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "\n17 multiplied by 23 equals 391.",
+      "latency_s": 0.11
+    },
+    {
+      "id": "T03",
+      "desc": "web search",
+      "called_tool": "search_web",
+      "called_tools": [
+        "search_web"
+      ],
+      "expected_tool": "search_web",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "query": {
+          "value": "large language models 2024 research papers",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "\n",
+      "latency_s": 0.16
+    },
+    {
+      "id": "T04",
+      "desc": "stock price",
+      "called_tool": "get_stock_price",
+      "called_tools": [
+        "get_stock_price"
+      ],
+      "expected_tool": "get_stock_price",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "symbol": {
+          "value": "TSLA",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.13
+    },
+    {
+      "id": "T05",
+      "desc": "translation",
+      "called_tool": "translate",
+      "called_tools": [
+        "translate"
+      ],
+      "expected_tool": "translate",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "text": {
+          "value": "good morning",
+          "pass": true
+        },
+        "target_language": {
+          "value": "fr",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.14
+    },
+    {
+      "id": "T06",
+      "desc": "unit conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units"
+      ],
+      "expected_tool": "convert_units",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "value": {
+          "value": 100,
+          "pass": true
+        },
+        "from_unit": {
+          "value": "kilometers",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.17
+    },
+    {
+      "id": "T07",
+      "desc": "timezone time",
+      "called_tool": "get_current_time",
+      "called_tools": [
+        "get_current_time"
+      ],
+      "expected_tool": "get_current_time",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "timezone": {
+          "value": "Asia/Tokyo",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.14
+    },
+    {
+      "id": "T08",
+      "desc": "set reminder",
+      "called_tool": "set_reminder",
+      "called_tools": [
+        "set_reminder"
+      ],
+      "expected_tool": "set_reminder",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "message": {
+          "value": "Take my medicine",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "\n",
+      "latency_s": 0.17
+    },
+    {
+      "id": "T09",
+      "desc": "send email",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": "send_email",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "\nThe user has requested to send an email, but the necessary function to perform this action is not available in the provided tools. The available functions are for creating calendar events and searching the web, which do not align with the task of sending an email. Therefore, I cannot fulfill the request with the current toolset.\n\n<response>\nI'm sorry, but I don't have the capability to send emails. You may need to use your email client or another service to send this message.\n</response>",
+      "latency_s": 0.48
+    },
+    {
+      "id": "T10",
+      "desc": "create calendar event",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": "create_calendar_event",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "\nTo schedule a dentist appointment, I need the location or name of the dentist's office. Could you please provide that information?",
+      "latency_s": 0.18
+    },
+    {
+      "id": "T11",
+      "desc": "read file",
+      "called_tool": "read_file",
+      "called_tools": [
+        "read_file"
+      ],
+      "expected_tool": "read_file",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "path": {
+          "value": "/var/log/app.log",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.12
+    },
+    {
+      "id": "T12",
+      "desc": "random number",
+      "called_tool": "random_number",
+      "called_tools": [
+        "random_number"
+      ],
+      "expected_tool": "random_number",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "min": {
+          "value": 1,
+          "pass": true
+        },
+        "max": {
+          "value": 100,
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.13
+    },
+    {
+      "id": "T13",
+      "desc": "word definition",
+      "called_tool": "get_definition",
+      "called_tools": [
+        "get_definition"
+      ],
+      "expected_tool": "get_definition",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "word": {
+          "value": "ephemeral",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "\n",
+      "latency_s": 0.14
+    },
+    {
+      "id": "T14",
+      "desc": "currency conversion",
+      "called_tool": "convert_currency",
+      "called_tools": [
+        "convert_currency"
+      ],
+      "expected_tool": "convert_currency",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "amount": {
+          "value": 500,
+          "pass": true
+        },
+        "from_currency": {
+          "value": "USD",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.2
+    },
+    {
+      "id": "T15",
+      "desc": "geocode",
+      "called_tool": "geocode",
+      "called_tools": [
+        "geocode"
+      ],
+      "expected_tool": "geocode",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "location": {
+          "value": "Eiffel Tower",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "\n<think></think>\n",
+      "latency_s": 0.16
+    },
+    {
+      "id": "T16",
+      "desc": "percent calculation",
+      "called_tool": "calculate",
+      "called_tools": [
+        "calculate"
+      ],
+      "expected_tool": "calculate",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "expression": {
+          "value": "0.15 * 840",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.15
+    },
+    {
+      "id": "T17",
+      "desc": "weather units",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather"
+      ],
+      "expected_tool": "get_weather",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "city": {
+          "value": "Berlin",
+          "pass": true
+        },
+        "units": {
+          "value": "celsius",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "\n",
+      "latency_s": 0.16
+    },
+    {
+      "id": "T18",
+      "desc": "translate Japanese",
+      "called_tool": "translate",
+      "called_tools": [
+        "translate"
+      ],
+      "expected_tool": "translate",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "text": {
+          "value": "goodbye",
+          "pass": true
+        },
+        "target_language": {
+          "value": "ja",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.16
+    },
+    {
+      "id": "T19",
+      "desc": "temperature conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units"
+      ],
+      "expected_tool": "convert_units",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "value": {
+          "value": 37,
+          "pass": true
+        },
+        "from_unit": {
+          "value": "Celsius",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.19
+    },
+    {
+      "id": "T20",
+      "desc": "Sydney time",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather"
+      ],
+      "expected_tool": "get_current_time",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "",
+      "latency_s": 0.17
+    },
+    {
+      "id": "T21",
+      "desc": "no-tool: basic math",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 1.0,
+      "raw_content": "\n2 plus 2 equals 4.",
+      "latency_s": 0.12
+    },
+    {
+      "id": "T22",
+      "desc": "no-tool: factual",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 1.0,
+      "raw_content": "\nThe play *Hamlet* was written by William Shakespeare. He is widely recognized as the author of this iconic work in English literature.",
+      "latency_s": 0.2
+    },
+    {
+      "id": "T23",
+      "desc": "no-tool: list",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 1.0,
+      "raw_content": "\nThe planets in our solar system, listed in order from the Sun, are:\n\n1. Mercury  \n2. Venus  \n3. Earth  \n4. Mars  \n5. Jupiter  \n6. Saturn  \n7. Uranus  \n8. Neptune  \n\n(Pluto is classified as a dwarf planet, not a planet.)",
+      "latency_s": 0.37
+    },
+    {
+      "id": "T24",
+      "desc": "optional param",
+      "called_tool": "search_web",
+      "called_tools": [
+        "search_web"
+      ],
+      "expected_tool": "search_web",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "query": {
+          "value": "Python tutorials",
+          "pass": true
+        },
+        "max_results": {
+          "value": 5,
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "\n",
+      "latency_s": 0.16
+    },
+    {
+      "id": "T25",
+      "desc": "enum param",
+      "called_tool": "set_language",
+      "called_tools": [
+        "set_language"
+      ],
+      "expected_tool": "set_language",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "language": {
+          "value": "es",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.13
+    },
+    {
+      "id": "T26",
+      "desc": "multi-tool: weather and time",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather",
+        "get_current_time"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "get_weather",
+        "get_current_time"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "get_weather": {
+          "city": {
+            "value": "Tokyo",
+            "pass": true
+          }
+        },
+        "get_current_time": {
+          "timezone": {
+            "value": "Asia/Tokyo",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.22
+    },
+    {
+      "id": "T27",
+      "desc": "multi-tool: stock and currency",
+      "called_tool": "get_stock_price",
+      "called_tools": [
+        "get_stock_price",
+        "convert_currency"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "get_stock_price",
+        "convert_currency"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "get_stock_price": {
+          "symbol": {
+            "value": "AAPL",
+            "pass": true
+          }
+        },
+        "convert_currency": {
+          "amount": {
+            "value": 100,
+            "pass": true
+          },
+          "from_currency": {
+            "value": "USD",
+            "pass": true
+          },
+          "to_currency": {
+            "value": "EUR",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.24
+    },
+    {
+      "id": "T28",
+      "desc": "multi-tool: email and calendar",
+      "called_tool": null,
+      "expected_tool": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "error": "Error code: 500 - {'error': {'code': 500, 'message': 'Failed to parse input at pos 1949: \"bob@example.com\"].\\n\\nI need to make sure the parameters are correctly formatted. The datetime for the calenda",
+      "latency_s": 8.31
+    },
+    {
+      "id": "T29",
+      "desc": "multi-tool: geocode and weather",
+      "called_tool": "geocode",
+      "called_tools": [
+        "geocode",
+        "get_weather"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "geocode",
+        "get_weather"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "geocode": {
+          "location": {
+            "value": "Eiffel Tower, Paris",
+            "pass": true
+          }
+        },
+        "get_weather": {
+          "city": {
+            "value": "Paris",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "\n<think></think>\nOkay, let's tackle the user's request. They want the coordinates of the Eiffel Tower and the current weather in Paris. \n\nFirst, I need to find the coordinates of the Eiffel Tower. The geocode tool is perfect for that. The parameter required is the location, so I'll use \"Eiffel Tower, Paris\" as the location. That should give me the latitude and longitude.\n\nNext, the weather in Paris. The get_weather tool requires a city name and units. The user didn't specify units, but since Paris is in France, it's likely they want Celsius. So I'll set city to \"Paris\" and units to \"celsius\".\n\nI need to make two separate tool calls. First, call geocode with the Eiffel Tower location. Then, call get_weather with Paris and Celsius. I'll structure each tool call within the specified XML tags. Let me double-check the parameters to ensure they're correct. Yep, looks good. No other parameters needed. Alright, time to write the tool calls.</think>",
+      "latency_s": 1.1
+    },
+    {
+      "id": "T30",
+      "desc": "multi-tool: reminder and unit conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units",
+        "set_reminder"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "convert_units",
+        "set_reminder"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "convert_units": {
+          "value": {
+            "value": 5,
+            "pass": true
+          },
+          "from_unit": {
+            "value": "miles",
+            "pass": true
+          },
+          "to_unit": {
+            "value": "kilometers",
+            "pass": true
+          }
+        },
+        "set_reminder": {
+          "time": {
+            "value": "18:00",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.24
+    }
+  ],
+  "timestamp": "2026-06-11T18:10:23.832813"
+}

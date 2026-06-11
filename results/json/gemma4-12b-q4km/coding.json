@@ -1,0 +1,168 @@
+{
+  "pass_at_1": 0.3,
+  "n_passed": 6,
+  "n_total": 20,
+  "details": [
+    {
+      "id": "HE/0",
+      "name": "has_close_elements",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmprambuf7c.py\", line 15\n    return False\n                ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "latency_s": 2.46,
+      "generated_code": "for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False"
+    },
+    {
+      "id": "HE/3",
+      "name": "below_zero",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpd_ych82h.py\", line 12\n    for amount in operations:\nIndentationError: unexpected indent\n",
+      "latency_s": 1.45,
+      "generated_code": "balance = 0\n    for amount in operations:\n        balance += amount\n        if balance < 0:\n            return True\n    return False"
+    },
+    {
+      "id": "HE/6",
+      "name": "parse_nested_parens",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpy90gce3q.py\", line 10\n    groups = paren_string.split()\nIndentationError: unexpected indent\n",
+      "latency_s": 3.82,
+      "generated_code": "results = []\n    groups = paren_string.split()\n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                if current_depth > max_depth:\n                    max_depth = current_depth\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    return results"
+    },
+    {
+      "id": "HE/9",
+      "name": "rolling_max",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpkag6e0ea.py\", line 10\n    current_max = float('-inf')\nIndentationError: unexpected indent\n",
+      "latency_s": 2.04,
+      "generated_code": "res = []\n    current_max = float('-inf')\n    for num in numbers:\n        if num > current_max:\n            current_max = num\n        res.append(current_max)\n    return res"
+    },
+    {
+      "id": "HE/14",
+      "name": "all_prefixes",
+      "passed": true,
+      "error": "",
+      "latency_s": 1.13,
+      "generated_code": "return [string[:i] for i in range(1, len(string) + 1)]"
+    },
+    {
+      "id": "HE/17",
+      "name": "parse_music",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpgogkq_pq.py\", line 10\n    result = []\nIndentationError: unexpected indent\n",
+      "latency_s": 2.81,
+      "generated_code": "notes = music_string.split()\n    result = []\n    for note in notes:\n        if note == 'o':\n            result.append(4)\n        elif note == 'o|':\n            result.append(2)\n        elif note == '.|':\n            result.append(1)\n    return result"
+    },
+    {
+      "id": "HE/20",
+      "name": "find_closest_elements",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmprmb2czse.py\", line 10\n    min_diff = float('inf')\nIndentationError: unexpected indent\n",
+      "latency_s": 3.65,
+      "generated_code": "numbers.sort()\n    min_diff = float('inf')\n    closest_pair = (numbers[0], numbers[1])\n    \n    for i in range(len(numbers) - 1):\n        diff = numbers[i+1] - numbers[i]\n        if diff < min_diff:\n            min_diff = diff\n            closest_pair = (numbers[i], numbers[i+1])\n            \n    return closest_pair"
+    },
+    {
+      "id": "HE/23",
+      "name": "strlen",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.6,
+      "generated_code": "return len(string)"
+    },
+    {
+      "id": "HE/24",
+      "name": "largest_divisor",
+      "passed": true,
+      "error": "",
+      "latency_s": 1.36,
+      "generated_code": "for i in range(n // 2, 0, -1):\n        if n % i == 0:\n            return i"
+    },
+    {
+      "id": "HE/26",
+      "name": "remove_duplicates",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmpc8djp8uh.py\", line 18, in <module>\n    assert remove_duplicates([1, 2, 3, 2, 4]) == [1, 3, 4]\nAssertionError\n",
+      "latency_s": 1.58,
+      "generated_code": "seen = set()\nresult = []\nfor num in numbers:\n    if num not in seen:\n        result.append(num)\n        seen.add(num)\nreturn result"
+    },
+    {
+      "id": "HE/28",
+      "name": "concatenate",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.62,
+      "generated_code": "return \"\".join(strings)"
+    },
+    {
+      "id": "HE/32",
+      "name": "poly_zero",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmp7mnk27nt.py\", line 25\n    low = -1000.0\nIndentationError: unexpected indent\n",
+      "latency_s": 64.9,
+      "generated_code": "# The polynomial is P(x) = c0 + c1*x + c2*x^2 + ... + cn*x^n\n    # Since there is an even number of coefficients, n is odd.\n    # The degree is n (odd), so the polynomial goes from -inf to +inf.\n    # We can use binary search or Newton's method, but since we need a zero\n    # and it's guaranteed to exist, we can use a simple bisection method.\n    \n    # Find a range [a, b] where P(a) and P(b) have different signs.\n    # Since the degree is odd, P(x) -> -inf as x -> -inf and P(x) -> +inf as x -> "
+    },
+    {
+      "id": "HE/33",
+      "name": "sort_third",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmp8gva02js.py\", line 12\n    values = sorted([l[i] for i in indices])\nIndentationError: unexpected indent\n",
+      "latency_s": 2.81,
+      "generated_code": "indices = [i for i in range(len(l)) if i % 3 == 0]\n    values = sorted([l[i] for i in indices])\n    result = list(l)\n    for i, val in zip(indices, values):\n        result[i] = val\n    return result"
+    },
+    {
+      "id": "HE/36",
+      "name": "fizz_buzz",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpeekj_e17.py\", line 12\n    for i in range(1, n + 1):\nIndentationError: unexpected indent\n",
+      "latency_s": 2.23,
+      "generated_code": "count = 0\n    for i in range(1, n + 1):\n        if i % 11 == 0 or i % 13 == 0:\n            count += str(i).count('7')\n    return count"
+    },
+    {
+      "id": "HE/41",
+      "name": "car_race_collision",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.54,
+      "generated_code": "return n * n"
+    },
+    {
+      "id": "HE/44",
+      "name": "change_base",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpew_i3kdn.py\", line 13\n    digits = []\n               ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "latency_s": 2.17,
+      "generated_code": "if x == 0:\n        return '0'\n    digits = []\n    while x > 0:\n        digits.append(str(x % base))\n        x //= base\n    return \"\".join(digits[::-1])"
+    },
+    {
+      "id": "HE/50",
+      "name": "encode_shift",
+      "passed": true,
+      "error": "",
+      "latency_s": 2.02,
+      "generated_code": "return ''.join([chr(((ord(ch) - ord('a') - 5) % 26) + ord('a')) if ch.isalpha() and ch.islower() else ch for ch in s])"
+    },
+    {
+      "id": "HE/51",
+      "name": "remove_vowels",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmp4pep6dd7.py\", line 12\n    return \"\".join(char for char in text if char not in vowels)\nIndentationError: unexpected indent\n",
+      "latency_s": 1.31,
+      "generated_code": "vowels = \"aeiouAEIOU\"\n    return \"\".join(char for char in text if char not in vowels)"
+    },
+    {
+      "id": "HE/58",
+      "name": "common",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpu26ehxq1.py\", line 10\n    return res\nIndentationError: unexpected indent\n",
+      "latency_s": 1.18,
+      "generated_code": "res = sorted(list(set(l1) & set(l2)))\n    return res"
+    },
+    {
+      "id": "HE/62",
+      "name": "derivative",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpk64kgr_z.py\", line 14\n    return [i * xs[i] for i in range(1, len(xs) - 1)]\n                                                     ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "latency_s": 25.14,
+      "generated_code": "if len(xs) <= 1:\n        return []\n    return [i * xs[i] for i in range(1, len(xs) - 1)]"
+    }
+  ],
+  "timestamp": "2026-06-11T17:53:25.846714"
+}

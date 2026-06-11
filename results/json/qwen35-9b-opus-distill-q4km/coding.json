@@ -1,0 +1,168 @@
+{
+  "pass_at_1": 0.8,
+  "n_passed": 16,
+  "n_total": 20,
+  "details": [
+    {
+      "id": "HE/0",
+      "name": "has_close_elements",
+      "passed": true,
+      "error": "",
+      "latency_s": 5.15,
+      "generated_code": "numbers.sort()\nfor i in range(len(numbers) - 1):\n    if numbers[i + 1] - numbers[i] < threshold:\n        return True\nreturn False"
+    },
+    {
+      "id": "HE/3",
+      "name": "below_zero",
+      "passed": true,
+      "error": "",
+      "latency_s": 3.19,
+      "generated_code": "balance = 0\nfor op in operations:\n    balance += op\n    if balance < 0:\n        return True\nreturn False"
+    },
+    {
+      "id": "HE/6",
+      "name": "parse_nested_parens",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpt__zdhh8.py\", line 10\n    for group in paren_string.split():\nIndentationError: unexpected indent\n",
+      "latency_s": 7.28,
+      "generated_code": "result = []\n    for group in paren_string.split():\n        depth = 0\n        max_depth = 0\n        for char in group:\n            if char == '(':\n                depth += 1\n                max_depth = max(max_depth, depth)\n            elif char == ')':\n                depth -= 1\n        result.append(max_depth)\n    return result"
+    },
+    {
+      "id": "HE/9",
+      "name": "rolling_max",
+      "passed": true,
+      "error": "",
+      "latency_s": 6.46,
+      "generated_code": "result = []\ncurrent_max = float('-inf')\nfor num in numbers:\n    current_max = max(current_max, num)\n    result.append(current_max)\nreturn result"
+    },
+    {
+      "id": "HE/14",
+      "name": "all_prefixes",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.93,
+      "generated_code": "return [string[:i] for i in range(1, len(string) + 1)]"
+    },
+    {
+      "id": "HE/17",
+      "name": "parse_music",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmplcp_nk_t.py\", line 10\n    beats = []\nIndentationError: unexpected indent\n",
+      "latency_s": 6.75,
+      "generated_code": "notes = music_string.split()\n    beats = []\n    for note in notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats"
+    },
+    {
+      "id": "HE/20",
+      "name": "find_closest_elements",
+      "passed": true,
+      "error": "",
+      "latency_s": 7.73,
+      "generated_code": "numbers.sort()\nif len(numbers) < 2:\n    return (0.0, 0.0)\nmin_diff = float('inf')\nclosest_pair = (numbers[0], numbers[1])\nfor i in range(1, len(numbers)):\n    diff = numbers[i] - numbers[i-1]\n    if diff < min_diff:\n        min_diff = diff\n        closest_pair = (numbers[i-1], numbers[i])\nreturn closest_pair"
+    },
+    {
+      "id": "HE/23",
+      "name": "strlen",
+      "passed": true,
+      "error": "",
+      "latency_s": 2.26,
+      "generated_code": "return len(string)"
+    },
+    {
+      "id": "HE/24",
+      "name": "largest_divisor",
+      "passed": true,
+      "error": "",
+      "latency_s": 8.54,
+      "generated_code": "if n <= 1:\n    return 1\nsmallest_divisor = 2\nwhile smallest_divisor * smallest_divisor <= n:\n    if n % smallest_divisor == 0:\n        break\n    smallest_divisor += 1\nif smallest_divisor * smallest_divisor > n:\n    smallest_divisor = n\nreturn n // smallest_divisor"
+    },
+    {
+      "id": "HE/26",
+      "name": "remove_duplicates",
+      "passed": true,
+      "error": "",
+      "latency_s": 7.31,
+      "generated_code": "counts = {}\nfor num in numbers:\n    counts[num] = counts.get(num, 0) + 1\n\nreturn [num for num in numbers if counts[num] == 1]"
+    },
+    {
+      "id": "HE/28",
+      "name": "concatenate",
+      "passed": true,
+      "error": "",
+      "latency_s": 2.2,
+      "generated_code": "return \"\".join(strings)"
+    },
+    {
+      "id": "HE/32",
+      "name": "poly_zero",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmpak42496u.py\", line 47, in <module>\n    assert math.isclose(poly([1, 2], find_zero([1, 2])), 0, abs_tol=1e-3)\nAssertionError\n",
+      "latency_s": 12.69,
+      "generated_code": "def find_zero(xs: list):\n    # Evaluate polynomial at min and max coefficient values\n    min_val = min(xs)\n    max_val = max(xs)\n    \n    # Use bisection method between min_val and max_val\n    left, right = min_val, max_val\n    \n    while right - left > 1e-9:\n        mid = (left + right) / 2\n        val = poly(xs, mid)\n        \n        if val == 0:\n            return mid\n        \n        # Check signs at endpoints\n        left_val = poly(xs, left)\n        right_val = poly(xs, right)\n        \n   "
+    },
+    {
+      "id": "HE/33",
+      "name": "sort_third",
+      "passed": true,
+      "error": "",
+      "latency_s": 7.47,
+      "generated_code": "indices = [i for i in range(len(l)) if i % 3 == 0]\nvalues = [l[i] for i in indices]\nvalues.sort()\nfor i, idx in enumerate(indices):\n    l[idx] = values[i]\nreturn l"
+    },
+    {
+      "id": "HE/36",
+      "name": "fizz_buzz",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmptyp95jgs.py\", line 18, in <module>\n    assert fizz_buzz(78) == 2\nAssertionError\n",
+      "latency_s": 22.6,
+      "generated_code": "count = 0\nfor i in range(1, n + 1):\n    if i % 11 == 0 or i % 13 == 0:\n        count += str(i).count('7')\nreturn count"
+    },
+    {
+      "id": "HE/41",
+      "name": "car_race_collision",
+      "passed": true,
+      "error": "",
+      "latency_s": 1.94,
+      "generated_code": "return n * n"
+    },
+    {
+      "id": "HE/44",
+      "name": "change_base",
+      "passed": true,
+      "error": "",
+      "latency_s": 9.01,
+      "generated_code": "if x == 0:\n    return '0'\ndigits = []\nwhile x > 0:\n    digits.append(str(x % base))\n    x //= base\nreturn ''.join(reversed(digits))"
+    },
+    {
+      "id": "HE/50",
+      "name": "encode_shift",
+      "passed": true,
+      "error": "",
+      "latency_s": 4.43,
+      "generated_code": "return ''.join([chr(((ord(ch) - 5 - ord('a')) % 26) + ord('a')) if ch.isalpha() and ch.islower() else ch for ch in s])"
+    },
+    {
+      "id": "HE/51",
+      "name": "remove_vowels",
+      "passed": true,
+      "error": "",
+      "latency_s": 3.31,
+      "generated_code": "vowels = set('aeiouAEIOU')\nreturn ''.join(char for char in text if char not in vowels)"
+    },
+    {
+      "id": "HE/58",
+      "name": "common",
+      "passed": true,
+      "error": "",
+      "latency_s": 6.0,
+      "generated_code": "return sorted(list(set(l1) & set(l2)))"
+    },
+    {
+      "id": "HE/62",
+      "name": "derivative",
+      "passed": true,
+      "error": "",
+      "latency_s": 6.06,
+      "generated_code": "return [i * xs[i] for i in range(1, len(xs))]"
+    }
+  ],
+  "timestamp": "2026-06-11T18:04:27.500540"
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.log
+*.gguf
+benchmarks/results/
+tools/
