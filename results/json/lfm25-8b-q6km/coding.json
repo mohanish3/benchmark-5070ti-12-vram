@@ -1,0 +1,168 @@
+{
+  "pass_at_1": 0.55,
+  "n_passed": 11,
+  "n_total": 20,
+  "details": [
+    {
+      "id": "HE/0",
+      "name": "has_close_elements",
+      "passed": false,
+      "error": "  File \"%TEMP%\\tmpol1pyx4g.py\", line 18\n    </think>\n    ^\nSyntaxError: invalid syntax\n",
+      "latency_s": 0.93,
+      "generated_code": "def has_close_elements(numbers: List[float], threshold: float) -> bool:\n    sorted_numbers = sorted(numbers)\n    for i in range(len(sorted_numbers) - 1):\n        if sorted_numbers[i+1] - sorted_numbers[i] < threshold:\n            return True\n    return False\n\n</think>\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    sorted_numbers = sorted(numbers)\n    for i in range(len(sorted_numbers) - 1):\n        if sorted_numbers[i+1] - sorted_numbers[i] < threshold:\n            r"
+    },
+    {
+      "id": "HE/3",
+      "name": "below_zero",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.31,
+      "generated_code": "from typing import List\n\ndef below_zero(operations: List[int]) -> bool:\n    balance = 0\n    for operation in operations:\n        balance += operation\n        if balance < 0:\n            return True\n    return False"
+    },
+    {
+      "id": "HE/6",
+      "name": "parse_nested_parens",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmpg39kpx9o.py\", line 29, in <module>\n    assert parse_nested_parens('(()()) ((())) () ((())(()))') == [2, 3, 1, 3]\nAssertionError\n",
+      "latency_s": 0.7,
+      "generated_code": "from typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\"Return max nesting depth for each group of parens (groups separated by spaces).\n    >>> parse_nested_parens('(()()) ((())) () ((())(()))')\n    [2, 3, 1, 3]\n    \"\"\"\n    result = []\n    current_depth = 0\n    max_depth = 0\n    for char in paren_string:\n        if char == '(':\n            current_depth += 1\n            if current_depth > max_depth:\n                max_depth = current_depth\n        elif char == '"
+    },
+    {
+      "id": "HE/9",
+      "name": "rolling_max",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmpf3tmr114.py\", line 21, in <module>\n    assert rolling_max([]) == []\n           ^^^^^^^^^^^^^^^\n  File \"%TEMP%\\tmpf3tmr114.py\", line 13, in rolling_max\n    current_max = numbers[0]\n                  ~~~~~~~^^^\nIndexError: list index out of range\n",
+      "latency_s": 0.36,
+      "generated_code": "from typing import List\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    result = []\n    current_max = numbers[0]\n    result.append(current_max)\n    for num in numbers[1:]:\n        if num > current_max:\n            current_max = num\n        result.append(current_max)\n    return result"
+    },
+    {
+      "id": "HE/14",
+      "name": "all_prefixes",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.4,
+      "generated_code": "from typing import List\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\"Return list of all prefixes of the input string from shortest to longest.\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n    return [string[:i] for i in range(1, len(string) + 1)]"
+    },
+    {
+      "id": "HE/17",
+      "name": "parse_music",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmp0i5kqqt7.py\", line 23, in <module>\n    assert parse_music('o o| .| o| o| .| .| .| .| o o') == [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\nAssertionError\n",
+      "latency_s": 0.4,
+      "generated_code": "from typing import List\n\ndef parse_music(music_string: str) -> List[int]:\n    beats = []\n    for char in music_string:\n        if char == 'o':\n            beats.append(4)\n        elif char == 'o|':\n            beats.append(2)\n        elif char == '.|':\n            beats.append(1)\n    return beats"
+    },
+    {
+      "id": "HE/20",
+      "name": "find_closest_elements",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmpmdrssz92.py\", line 21, in <module>\n    assert find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2]) == (2.0, 2.2)\nAssertionError\n",
+      "latency_s": 0.67,
+      "generated_code": "def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\"Return the two closest values from the sorted list (smaller first).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    \"\"\"\n    closest = []\n    for i in range(len(numbers) - 1):\n        diff = abs(numbers[i] - numbers[i+1])\n        if not closest or diff < closest[0]:\n            closest = [numbers[i], numbers[i+1]]\n    return tuple(closest)"
+    },
+    {
+      "id": "HE/23",
+      "name": "strlen",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.29,
+      "generated_code": "def strlen(string: str) -> int:\n    \"\"\"Return the length of the string.\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    3\n    \"\"\"\n    return len(string)"
+    },
+    {
+      "id": "HE/24",
+      "name": "largest_divisor",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.49,
+      "generated_code": "def largest_divisor(n: int) -> int:\n    \"\"\"Return the largest divisor of n that is smaller than n.\n    >>> largest_divisor(15)\n    5\n    \"\"\"\n    if n <= 1:\n        return 0\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return n // i\n    return 1"
+    },
+    {
+      "id": "HE/26",
+      "name": "remove_duplicates",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmpw2ex28c7.py\", line 25, in <module>\n    assert remove_duplicates([1, 2, 3, 2, 4]) == [1, 3, 4]\nAssertionError\n",
+      "latency_s": 0.5,
+      "generated_code": "from typing import List\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\"Remove elements that appear more than once, keeping order.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\n    seen = set()\n    result = []\n    for num in numbers:\n        if num not in seen:\n            seen.add(num)\n            result.append(num)\n    return result"
+    },
+    {
+      "id": "HE/28",
+      "name": "concatenate",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.31,
+      "generated_code": "def concatenate(strings: List[str]) -> str:\n    \"\"\"Concatenate all strings in the list.\n    >>> concatenate(['a', 'b', 'c'])\n    'abc'\n    \"\"\"\n    return \"\".join(strings)"
+    },
+    {
+      "id": "HE/32",
+      "name": "poly_zero",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmps1z0zjh2.py\", line 31, in <module>\n    assert math.isclose(poly([1, 2], find_zero([1, 2])), 0, abs_tol=1e-3)\nAssertionError\n",
+      "latency_s": 0.73,
+      "generated_code": "import math\n\ndef poly(xs: list, x: float):\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\ndef find_zero(xs: list):\n    \"\"\"Find a zero of a polynomial with an even number of coefficients.\n    The largest coefficient is non-zero. Guaranteed to have a zero.\n    >>> round(find_zero([1, 2]), 3)\n    -0.5\n    \"\"\"\n    n = len(xs)\n    for i in range(n // 2):\n        if poly(xs, -i - 1) * poly(xs, i + 1) <= 0:\n            return -i - 1\n    return 0"
+    },
+    {
+      "id": "HE/33",
+      "name": "sort_third",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.79,
+      "generated_code": "from typing import List\n\ndef sort_third(l: List[int]) -> List[int]:\n    \"\"\"Return list where values at indices divisible by 3 are sorted, others unchanged.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n    indices = [i for i in range(len(l)) if i % 3 == 0]\n    values = [l[i] for i in indices]\n    values.sort()\n    for idx, val in zip(indices, values):\n        l[idx] = val\n    return l"
+    },
+    {
+      "id": "HE/36",
+      "name": "fizz_buzz",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmpv2_vl1h5.py\", line 18, in <module>\n    assert fizz_buzz(50) == 0\nAssertionError\n",
+      "latency_s": 0.34,
+      "generated_code": "def fizz_buzz(n: int) -> int:\n    count = 0\n    for i in range(1, n + 1):\n        if i % 11 == 0 or i % 13 == 0:\n            count += 1\n    return count"
+    },
+    {
+      "id": "HE/41",
+      "name": "car_race_collision",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"%TEMP%\\tmp8cw7i7dc.py\", line 11, in <module>\n    assert car_race_collision(3) == 9\nAssertionError\n",
+      "latency_s": 0.22,
+      "generated_code": "def car_race_collision(n: int) -> int:\n    return 2 * n * (n - 1)"
+    },
+    {
+      "id": "HE/44",
+      "name": "change_base",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.61,
+      "generated_code": "def change_base(x: int, base: int) -> str:\n    \"\"\"Convert x to given base (base < 10), return as string.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    \"\"\"\n    if x == 0:\n        return \"0\"\n    digits = []\n    while x > 0:\n        digits.append(str(x % base))\n        x //= base\n    return ''.join(reversed(digits))"
+    },
+    {
+      "id": "HE/50",
+      "name": "encode_shift",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.74,
+      "generated_code": "def encode_shift(s: str) -> str:\n    \"\"\"Shift each letter in s by 5 in alphabet, wrap around.\"\"\"\n    return ''.join([chr(((ord(ch) + 5 - ord('a')) % 26) + ord('a')) if ch.isalpha() and ch.islower() else ch for ch in s])\n\ndef decode_shift(s: str) -> str:\n    \"\"\"Decode a string encoded with encode_shift.\n    >>> decode_shift(encode_shift('hello'))\n    'hello'\n    \"\"\"\n    return ''.join([chr(((ord(ch) - 5 - ord('a')) % 26) + ord('a')) if ch.isalpha() and ch.islower() else ch for ch in s])"
+    },
+    {
+      "id": "HE/51",
+      "name": "remove_vowels",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.24,
+      "generated_code": "def remove_vowels(text: str) -> str:\n    return ''.join([char for char in text if char.lower() not in 'aeiou'])"
+    },
+    {
+      "id": "HE/58",
+      "name": "common",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.52,
+      "generated_code": "from typing import List\n\ndef common(l1: List[int], l2: List[int]) -> List[int]:\n    \"\"\"Return unique common elements of two lists, sorted.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    \"\"\"\n    return sorted(set(l1) & set(l2))"
+    },
+    {
+      "id": "HE/62",
+      "name": "derivative",
+      "passed": true,
+      "error": "",
+      "latency_s": 0.66,
+      "generated_code": "def derivative(xs: List[int]) -> List[int]:\n    \"\"\"Return derivative of polynomial represented as list of coefficients.\n    xs[0] + xs[1]*x + xs[2]*x^2 + ...\n    >>> derivative([3, 1, 2, 4, 5])\n    [1, 4, 12, 20]\n    >>> derivative([1, 2, 3])\n    [2, 6]\n    \"\"\"\n    return [xs[i] * i for i in range(1, len(xs))]\n    return [xs[i] * i for i in range(1, len(xs))]"
+    }
+  ],
+  "timestamp": "2026-06-11T18:10:35.960236"
+}

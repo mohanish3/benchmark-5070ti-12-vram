@@ -1,0 +1,719 @@
+{
+  "tool_accuracy": 0.9259,
+  "param_accuracy": 0.8889,
+  "no_tool_accuracy": 1.0,
+  "overall_score": 0.9167,
+  "n_tests": 30,
+  "n_tool_tests": 27,
+  "n_no_tool_tests": 3,
+  "details": [
+    {
+      "id": "T01",
+      "desc": "weather lookup",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather"
+      ],
+      "expected_tool": "get_weather",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "city": {
+          "value": "Tokyo",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.44
+    },
+    {
+      "id": "T02",
+      "desc": "arithmetic calculation",
+      "called_tool": "calculate",
+      "called_tools": [
+        "calculate"
+      ],
+      "expected_tool": "calculate",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "expression": {
+          "value": "17 * 23",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.81
+    },
+    {
+      "id": "T03",
+      "desc": "web search",
+      "called_tool": "search_web",
+      "called_tools": [
+        "search_web"
+      ],
+      "expected_tool": "search_web",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "query": {
+          "value": "large language models research papers 2024",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.09
+    },
+    {
+      "id": "T04",
+      "desc": "stock price",
+      "called_tool": "get_stock_price",
+      "called_tools": [
+        "get_stock_price"
+      ],
+      "expected_tool": "get_stock_price",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "symbol": {
+          "value": "TSLA",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.01
+    },
+    {
+      "id": "T05",
+      "desc": "translation",
+      "called_tool": "translate",
+      "called_tools": [
+        "translate"
+      ],
+      "expected_tool": "translate",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "text": {
+          "value": "good morning",
+          "pass": true
+        },
+        "target_language": {
+          "value": "fr",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.99
+    },
+    {
+      "id": "T06",
+      "desc": "unit conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units"
+      ],
+      "expected_tool": "convert_units",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "value": {
+          "value": 100,
+          "pass": true
+        },
+        "from_unit": {
+          "value": "kilometers",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.8
+    },
+    {
+      "id": "T07",
+      "desc": "timezone time",
+      "called_tool": "get_current_time",
+      "called_tools": [
+        "get_current_time"
+      ],
+      "expected_tool": "get_current_time",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "timezone": {
+          "value": "Asia/Tokyo",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.97
+    },
+    {
+      "id": "T08",
+      "desc": "set reminder",
+      "called_tool": "set_reminder",
+      "called_tools": [
+        "set_reminder"
+      ],
+      "expected_tool": "set_reminder",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "message": {
+          "value": "Take your medicine",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.17
+    },
+    {
+      "id": "T09",
+      "desc": "send email",
+      "called_tool": "send_email",
+      "called_tools": [
+        "send_email"
+      ],
+      "expected_tool": "send_email",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "to": {
+          "value": "alice@example.com",
+          "pass": true
+        },
+        "subject": {
+          "value": "Project Update",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.91
+    },
+    {
+      "id": "T10",
+      "desc": "create calendar event",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": "create_calendar_event",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "",
+      "latency_s": 6.96
+    },
+    {
+      "id": "T11",
+      "desc": "read file",
+      "called_tool": "read_file",
+      "called_tools": [
+        "read_file"
+      ],
+      "expected_tool": "read_file",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "path": {
+          "value": "/var/log/app.log",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.89
+    },
+    {
+      "id": "T12",
+      "desc": "random number",
+      "called_tool": "random_number",
+      "called_tools": [
+        "random_number"
+      ],
+      "expected_tool": "random_number",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "min": {
+          "value": 1,
+          "pass": true
+        },
+        "max": {
+          "value": 100,
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.04
+    },
+    {
+      "id": "T13",
+      "desc": "word definition",
+      "called_tool": "get_definition",
+      "called_tools": [
+        "get_definition"
+      ],
+      "expected_tool": "get_definition",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "word": {
+          "value": "ephemeral",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.9
+    },
+    {
+      "id": "T14",
+      "desc": "currency conversion",
+      "called_tool": "convert_currency",
+      "called_tools": [
+        "convert_currency"
+      ],
+      "expected_tool": "convert_currency",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "amount": {
+          "value": 500,
+          "pass": true
+        },
+        "from_currency": {
+          "value": "USD",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.49
+    },
+    {
+      "id": "T15",
+      "desc": "geocode",
+      "called_tool": "geocode",
+      "called_tools": [
+        "geocode"
+      ],
+      "expected_tool": "geocode",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "location": {
+          "value": "Eiffel Tower, Paris, France",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.02
+    },
+    {
+      "id": "T16",
+      "desc": "percent calculation",
+      "called_tool": "calculate",
+      "called_tools": [
+        "calculate"
+      ],
+      "expected_tool": "calculate",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "expression": {
+          "value": "0.15 * 840",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.6
+    },
+    {
+      "id": "T17",
+      "desc": "weather units",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather"
+      ],
+      "expected_tool": "get_weather",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "city": {
+          "value": "Berlin",
+          "pass": true
+        },
+        "units": {
+          "value": "celsius",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.04
+    },
+    {
+      "id": "T18",
+      "desc": "translate Japanese",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": "translate",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "In Japanese, there are several ways to say \"goodbye\" depending on the context and level of formality:\n\n## Common Ways to Say Goodbye\n\n| Japanese | Romaji | Meaning/Usage |\n|----------|-------|---------------|\n| **\u3055\u3088\u3046\u306a\u3089** | *say\u014dnara* | The most common, direct translation of \"goodbye\" |\n| **\u3058\u3083\u3042** | *jaa* | Casual, informal \"see you later\" or \"bye\" |\n| **\u307e\u305f\u306d** | *mata ne* | \"See you again\" or \"see you later\" |\n| **\u304a\u5143\u6c17\u3067** | *ogenki de* | \"Take care\" (polite/formal) |\n| **\u5931\u793c\u3057\u307e\u3059** | *shitsurei shimasu* | \"I'll be rude now\" (when leaving a formal situation) |\n\n## Quick Tips\n\n- **\u3055\u3088\u3046\u306a\u3089** is safe to use in almost any situation\n- **\u307e\u305f\u306d** is friendly and implies you'll meet again\n- **\u304a\u5143\u6c17\u3067** is polite and shows consideration for the other person's well-being\n- **\u5931\u793c\u3057\u307e\u3059** is used when you're leaving a meeting, event, or formal gathering\n\nWould you like to know more about any of these expressions or how to use them in specific situations?",
+      "latency_s": 6.58
+    },
+    {
+      "id": "T19",
+      "desc": "temperature conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units"
+      ],
+      "expected_tool": "convert_units",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "value": {
+          "value": 37,
+          "pass": true
+        },
+        "from_unit": {
+          "value": "celsius",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.45
+    },
+    {
+      "id": "T20",
+      "desc": "Sydney time",
+      "called_tool": "get_current_time",
+      "called_tools": [
+        "get_current_time"
+      ],
+      "expected_tool": "get_current_time",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "timezone": {
+          "value": "Australia/Sydney",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.38
+    },
+    {
+      "id": "T21",
+      "desc": "no-tool: basic math",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 1.0,
+      "raw_content": "2 plus 2 equals 4.",
+      "latency_s": 0.87
+    },
+    {
+      "id": "T22",
+      "desc": "no-tool: factual",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 1.0,
+      "raw_content": "William Shakespeare wrote the play *Hamlet*. It is one of his most famous tragedies, first published in 1603.",
+      "latency_s": 1.07
+    },
+    {
+      "id": "T23",
+      "desc": "no-tool: list",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 1.0,
+      "raw_content": "The planets in our solar system, in order from the Sun, are:\n\n1. **Mercury**\n2. **Venus**\n3. **Earth**\n4. **Mars**\n5. **Jupiter**\n6. **Saturn**\n7. **Uranus**\n8. **Neptune**\n\nA helpful way to remember this order is the mnemonic: **M**y **V**ery **E**ducated **M**other **J**ust **S**erved **U**s **N**oodles.",
+      "latency_s": 3.06
+    },
+    {
+      "id": "T24",
+      "desc": "optional param",
+      "called_tool": "search_web",
+      "called_tools": [
+        "search_web"
+      ],
+      "expected_tool": "search_web",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "query": {
+          "value": "Python tutorials",
+          "pass": true
+        },
+        "max_results": {
+          "value": 5,
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.03
+    },
+    {
+      "id": "T25",
+      "desc": "enum param",
+      "called_tool": "set_language",
+      "called_tools": [
+        "set_language"
+      ],
+      "expected_tool": "set_language",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "language": {
+          "value": "es",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.89
+    },
+    {
+      "id": "T26",
+      "desc": "multi-tool: weather and time",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather",
+        "get_current_time"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "get_weather",
+        "get_current_time"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "get_weather": {
+          "city": {
+            "value": "Tokyo",
+            "pass": true
+          }
+        },
+        "get_current_time": {
+          "timezone": {
+            "value": "Asia/Tokyo",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 2.55
+    },
+    {
+      "id": "T27",
+      "desc": "multi-tool: stock and currency",
+      "called_tool": "get_stock_price",
+      "called_tools": [
+        "get_stock_price",
+        "convert_currency"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "get_stock_price",
+        "convert_currency"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "get_stock_price": {
+          "symbol": {
+            "value": "AAPL",
+            "pass": true
+          }
+        },
+        "convert_currency": {
+          "amount": {
+            "value": 100,
+            "pass": true
+          },
+          "from_currency": {
+            "value": "USD",
+            "pass": true
+          },
+          "to_currency": {
+            "value": "EUR",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 2.1
+    },
+    {
+      "id": "T28",
+      "desc": "multi-tool: email and calendar",
+      "called_tool": "send_email",
+      "called_tools": [
+        "send_email",
+        "create_calendar_event"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "send_email",
+        "create_calendar_event"
+      ],
+      "tool_correct": true,
+      "params_correct": false,
+      "params_detail": {
+        "send_email": {
+          "to": {
+            "value": "bob@example.com",
+            "pass": true
+          },
+          "subject": {
+            "value": "Budget Review Meeting",
+            "pass": true
+          }
+        },
+        "create_calendar_event": {
+          "title": {
+            "value": null,
+            "pass": false
+          }
+        }
+      },
+      "score": 0.5,
+      "raw_content": "",
+      "latency_s": 7.06
+    },
+    {
+      "id": "T29",
+      "desc": "multi-tool: geocode and weather",
+      "called_tool": "geocode",
+      "called_tools": [
+        "geocode",
+        "get_weather"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "geocode",
+        "get_weather"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "geocode": {
+          "location": {
+            "value": "Eiffel Tower",
+            "pass": true
+          }
+        },
+        "get_weather": {
+          "city": {
+            "value": "Paris",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.61
+    },
+    {
+      "id": "T30",
+      "desc": "multi-tool: reminder and unit conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units",
+        "set_reminder"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "convert_units",
+        "set_reminder"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "convert_units": {
+          "value": {
+            "value": 5,
+            "pass": true
+          },
+          "from_unit": {
+            "value": "miles",
+            "pass": true
+          },
+          "to_unit": {
+            "value": "kilometers",
+            "pass": true
+          }
+        },
+        "set_reminder": {
+          "time": {
+            "value": "6pm",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.86
+    }
+  ],
+  "timestamp": "2026-06-11T17:37:40.287137"
+}
