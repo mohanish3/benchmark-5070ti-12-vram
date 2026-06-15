@@ -100,6 +100,15 @@ $MODELS = @(
         cpu_offload = $false
     },
     @{
+        id          = "gemma4-12b-q5km"
+        display     = "unsloth/gemma-4-12b-it Q5_K_M"
+        file        = "gemma4-12b-q5km\gemma-4-12b-it-Q5_K_M.gguf"
+        ngl         = 99
+        ctx         = 131072
+        threads     = 8
+        cpu_offload = $false
+    },
+    @{
         id          = "qwen35-9b-opus-distill-q4km"
         display     = "Jackrong/Qwen3.5-9B Claude Opus Distill"
         file        = "qwen35-9b-opus-distill-q4km\Qwen3.5-9B.Q4_K_M.gguf"

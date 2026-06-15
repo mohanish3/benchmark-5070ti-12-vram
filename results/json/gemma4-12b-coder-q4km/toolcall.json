@@ -1,0 +1,295 @@
+{
+  "tool_accuracy": 0.75,
+  "param_accuracy": 0.6667,
+  "no_tool_accuracy": 0.6667,
+  "overall_score": 0.7,
+  "n_tests": 15,
+  "n_tool_tests": 12,
+  "n_no_tool_tests": 3,
+  "details": [
+    {
+      "id": "T01",
+      "desc": "weather lookup",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather"
+      ],
+      "expected_tool": "get_weather",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "city": {
+          "value": "Tokyo",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.38
+    },
+    {
+      "id": "T02",
+      "desc": "arithmetic calculation",
+      "called_tool": "calculate",
+      "called_tools": [
+        "calculate"
+      ],
+      "expected_tool": "calculate",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": false,
+      "params_detail": {
+        "expression": {
+          "value": 1723,
+          "pass": false
+        }
+      },
+      "score": 0.5,
+      "raw_content": "",
+      "latency_s": 0.85
+    },
+    {
+      "id": "T03",
+      "desc": "web search",
+      "called_tool": "search_web",
+      "called_tools": [
+        "search_web"
+      ],
+      "expected_tool": "search_web",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "query": {
+          "value": "recent research papers on large language models published in 2024",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.21
+    },
+    {
+      "id": "T04",
+      "desc": "stock price",
+      "called_tool": "get_stock_price",
+      "called_tools": [
+        "get_stock_price"
+      ],
+      "expected_tool": "get_stock_price",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "symbol": {
+          "value": "TSLA",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.96
+    },
+    {
+      "id": "T05",
+      "desc": "translation",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": "translate",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "Bonjour.",
+      "latency_s": 0.45
+    },
+    {
+      "id": "T06",
+      "desc": "unit conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units"
+      ],
+      "expected_tool": "convert_units",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "value": {
+          "value": 100,
+          "pass": true
+        },
+        "from_unit": {
+          "value": "kilometer",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.39
+    },
+    {
+      "id": "T07",
+      "desc": "timezone time",
+      "called_tool": "get_current_time",
+      "called_tools": [
+        "get_current_time"
+      ],
+      "expected_tool": "get_current_time",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "timezone": {
+          "value": "Asia/Tokyo",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.02
+    },
+    {
+      "id": "T08",
+      "desc": "set reminder",
+      "called_tool": "set_reminder",
+      "called_tools": [
+        "set_reminder"
+      ],
+      "expected_tool": "set_reminder",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "message": {
+          "value": "take medicine",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.2
+    },
+    {
+      "id": "T16",
+      "desc": "percent calculation",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": "calculate",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "To find 15 percent of 840, you can multiply 840 by 0.15 (which is the decimal equivalent of 15%).\n\n840 \u00d7 0.15 = 126\n\nSo, 15 percent of 840 is 126.",
+      "latency_s": 2.57
+    },
+    {
+      "id": "T17",
+      "desc": "weather units",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather"
+      ],
+      "expected_tool": "get_weather",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "city": {
+          "value": "Berlin",
+          "pass": true
+        },
+        "units": {
+          "value": "celsius",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.02
+    },
+    {
+      "id": "T18",
+      "desc": "translate Japanese",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": "translate",
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": false,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "There are several ways to say \"goodbye\" in Japanese, depending on who you are talking to and whether you are leaving or the other person is leaving.\n\n### 1. The most common ways\n*   **Say\u014dnara (\u3055\u3088\u3046\u306a\u3089):** This is the standard \"goodbye\" you learn in textbooks. However, in daily life, it can sound final\u2014like you won't see the person for a long time (similar to \"farewell\").\n*   **Ja, mata (\u3058\u3083\u3001\u307e\u305f):** This is very common in casual conversation. It means \"See you later\" or \"See you soon.\"\n\n### 2. When you are leaving\nIf you are the one leaving and the other person is staying, you use a phrase that means \"I'm heading out\":\n*   **Osaki ni shitsurei shimasu (\u304a\u5148\u306b\u5931\u793c\u3057\u307e\u3059):** Formal \u2014 used in a business setting when leaving the office before others.\n*   **Nukete ikimasu (\u629c\u3051\u3066\u3044\u304d\u307e\u3059):** Casual \u2014 \"I'm heading out now.\"\n\n### 3. When the other person is leaving\nIf the other person is the one leaving, you use a phrase that means \"safe travels\":\n*   **Ki o tsukete (\u6c17\u3092\u3064\u3051\u3066):** Casual \u2014 \"Take care\" or \"Be careful.\"\n*   **Ki o tsukete kaeraremasen ka (\u6c17\u3092\u3064\u3051\u3066\u5e30\u308c\u307e\u3059\u304b):** Formal \u2014 \"Please get home safely.\"\n\n### 4. Time-specific goodbyes\nInstead of a general \"goodbye,\" Japanese people often use a phrase based on when they will see each other next:\n*   **Mata ashita (\u307e\u305f\u660e\u65e5):** See you tomorrow.\n*   **Mata raish\u016b (\u307e\u305f\u6765\u9031):** See you next week.\n*   **Mata raish\u016b-matsu (\u307e\u305f\u6765\u9031\u672b):** See you next weekend.\n*   **Mata ne (\u307e\u305f\u306d):** A friendly \"See ya!\"\n\n### Summary table\n| Situation | Japanese | Romaji | Meaning |\n| :--- | :--- | :--- | :--- |\n| Standard | \u3055\u3088\u3046\u306a\u3089 | Say\u014dnara | Goodbye |\n| Casual | \u3058\u3083\u3001\u307e\u305f | Ja, mata | See you later |\n| Formal (leaving) | \u304a\u5148\u306b\u5931\u793c\u3057\u307e\u3059 | Osaki ni shitsurei",
+      "latency_s": 17.25
+    },
+    {
+      "id": "T21",
+      "desc": "no-tool: basic math",
+      "called_tool": "calculate",
+      "called_tools": [
+        "calculate"
+      ],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": false,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 0.0,
+      "raw_content": "",
+      "latency_s": 0.84
+    },
+    {
+      "id": "T22",
+      "desc": "no-tool: factual",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 1.0,
+      "raw_content": "William Shakespeare wrote the play Hamlet.",
+      "latency_s": 0.49
+    },
+    {
+      "id": "T23",
+      "desc": "no-tool: list",
+      "called_tool": null,
+      "called_tools": [],
+      "expected_tool": null,
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {},
+      "score": 1.0,
+      "raw_content": "The planets in our solar system, in order from the sun, are:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Neptune",
+      "latency_s": 1.81
+    },
+    {
+      "id": "T25",
+      "desc": "enum param",
+      "called_tool": "set_language",
+      "called_tools": [
+        "set_language"
+      ],
+      "expected_tool": "set_language",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "language": {
+          "value": "es",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.8
+    }
+  ],
+  "timestamp": "2026-06-15T05:39:26.272705"
+}

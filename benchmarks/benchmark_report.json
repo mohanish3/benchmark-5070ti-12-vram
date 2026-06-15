@@ -1,0 +1,304 @@
+{
+  "generated": "2026-06-15T05:41:40.255547",
+  "models": {
+    "gemma4-12b-coder-q4km": {
+      "speed": {
+        "pp_tps": 1302.229712,
+        "tg_tps": 30.483507,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.75,
+        "param_accuracy": 0.6667,
+        "no_tool_accuracy": 0.6667,
+        "overall_score": 0.7
+      },
+      "coding": {
+        "pass_at_1": 0.9,
+        "n_passed": 9,
+        "n_total": 10
+      },
+      "reasoning": {
+        "accuracy": 0.8667,
+        "n_correct": 13,
+        "n_total": 15
+      }
+    },
+    "gemma4-12b-q4km": {
+      "speed": {
+        "pp_tps": 2474.549624,
+        "tg_tps": 52.070607,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.9259,
+        "param_accuracy": 0.8889,
+        "no_tool_accuracy": 0.6667,
+        "overall_score": 0.8833
+      },
+      "coding": {
+        "pass_at_1": 0.3,
+        "n_passed": 6,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.98,
+        "n_correct": 49,
+        "n_total": 50
+      }
+    },
+    "gemma4-12b-q5km": {
+      "speed": {
+        "pp_tps": 2396.023683,
+        "tg_tps": 46.620579,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.9259,
+        "param_accuracy": 0.8889,
+        "no_tool_accuracy": 0.6667,
+        "overall_score": 0.8833
+      },
+      "coding": {
+        "pass_at_1": 0.35,
+        "n_passed": 7,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.98,
+        "n_correct": 49,
+        "n_total": 50
+      }
+    },
+    "gemma4-12b-qat-q4kxl": {
+      "speed": {
+        "pp_tps": 2737.366279,
+        "tg_tps": 58.821672,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.9167,
+        "param_accuracy": 0.9167,
+        "no_tool_accuracy": 0.6667,
+        "overall_score": 0.8667
+      },
+      "coding": {
+        "pass_at_1": 0.4,
+        "n_passed": 4,
+        "n_total": 10
+      },
+      "reasoning": {
+        "accuracy": 0.8,
+        "n_correct": 12,
+        "n_total": 15
+      }
+    },
+    "lfm25-8b-q6km": {
+      "speed": {
+        "pp_tps": 7668.243248,
+        "tg_tps": 265.330663,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.8148,
+        "param_accuracy": 0.8148,
+        "no_tool_accuracy": 1.0,
+        "overall_score": 0.8333
+      },
+      "coding": {
+        "pass_at_1": 0.55,
+        "n_passed": 11,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.88,
+        "n_correct": 44,
+        "n_total": 50
+      }
+    },
+    "lfm25-8b-q8": {
+      "speed": {
+        "pp_tps": 9623.894701,
+        "tg_tps": 222.294364,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.8148,
+        "param_accuracy": 0.8148,
+        "no_tool_accuracy": 1.0,
+        "overall_score": 0.8333
+      },
+      "coding": {
+        "pass_at_1": 0.6,
+        "n_passed": 12,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.96,
+        "n_correct": 48,
+        "n_total": 50
+      }
+    },
+    "omnicoder-9b-q4km": {
+      "speed": {
+        "pp_tps": 3089.154167,
+        "tg_tps": 77.845766,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.963,
+        "param_accuracy": 0.963,
+        "no_tool_accuracy": 0.6667,
+        "overall_score": 0.9333
+      },
+      "coding": {
+        "pass_at_1": 0.95,
+        "n_passed": 19,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.56,
+        "n_correct": 28,
+        "n_total": 50
+      }
+    },
+    "omnicoder-9b-q5km": {
+      "speed": {
+        "pp_tps": 3165.410741,
+        "tg_tps": 70.510799,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 1.0,
+        "param_accuracy": 0.963,
+        "no_tool_accuracy": 1.0,
+        "overall_score": 0.9833
+      },
+      "coding": {
+        "pass_at_1": 0.85,
+        "n_passed": 17,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.66,
+        "n_correct": 33,
+        "n_total": 50
+      }
+    },
+    "qwen35-9b-glm51-distill-q5km": {
+      "speed": {
+        "pp_tps": 2862.650217,
+        "tg_tps": 69.15519,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.963,
+        "param_accuracy": 0.963,
+        "no_tool_accuracy": 1.0,
+        "overall_score": 0.9667
+      },
+      "coding": {
+        "pass_at_1": 0.85,
+        "n_passed": 17,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.92,
+        "n_correct": 46,
+        "n_total": 50
+      }
+    },
+    "qwen35-9b-glm51-q4km": {
+      "speed": {
+        "pp_tps": 2980.828219,
+        "tg_tps": 80.232354,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.9259,
+        "param_accuracy": 0.9259,
+        "no_tool_accuracy": 0.6667,
+        "overall_score": 0.9
+      },
+      "coding": {
+        "pass_at_1": 0.75,
+        "n_passed": 15,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.9,
+        "n_correct": 45,
+        "n_total": 50
+      }
+    },
+    "qwen35-9b-opus-distill-q4km": {
+      "speed": {
+        "pp_tps": 3082.096206,
+        "tg_tps": 79.852316,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.9259,
+        "param_accuracy": 0.9259,
+        "no_tool_accuracy": 1.0,
+        "overall_score": 0.9333
+      },
+      "coding": {
+        "pass_at_1": 0.8,
+        "n_passed": 16,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.92,
+        "n_correct": 46,
+        "n_total": 50
+      }
+    },
+    "qwen35-9b-opus-distill-q5km": {
+      "speed": {
+        "pp_tps": 3178.406321,
+        "tg_tps": 70.436137,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.963,
+        "param_accuracy": 0.963,
+        "no_tool_accuracy": 1.0,
+        "overall_score": 0.9667
+      },
+      "coding": {
+        "pass_at_1": 0.65,
+        "n_passed": 13,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.98,
+        "n_correct": 49,
+        "n_total": 50
+      }
+    },
+    "qwopus35-9b-coder-mtp-q4km": {
+      "speed": {
+        "pp_tps": 2958.01799,
+        "tg_tps": 78.62538,
+        "ngl": 99
+      },
+      "toolcall": {
+        "tool_accuracy": 0.9259,
+        "param_accuracy": 0.8889,
+        "no_tool_accuracy": 1.0,
+        "overall_score": 0.9167
+      },
+      "coding": {
+        "pass_at_1": 0.75,
+        "n_passed": 15,
+        "n_total": 20
+      },
+      "reasoning": {
+        "accuracy": 0.92,
+        "n_correct": 46,
+        "n_total": 50
+      }
+    }
+  }
+}
