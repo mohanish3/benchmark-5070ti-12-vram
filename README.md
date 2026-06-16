@@ -23,7 +23,7 @@ Speed test now enforces 128k context for newly generated rows (`fit_min_ctx = 13
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `gemma4-12b-q4km` | 2474.5 | 52.1 | 3 | 88.3% | 80.0% (4/5) | 30.0% (6/20) | 98.0% (49/50) |
 | `gemma4-12b-q5km` | 2396.0 | 46.6 | 3 | 88.3% | 80.0% (4/5) | 35.0% (7/20) | 98.0% (49/50) |
-| `gemma4-12b-coder-q4km` ¹ | 1302.2 | 30.5 | 1 | 70.0% | — | 90.0% (9/10) | 86.7% (13/15) |
+| `gemma4-12b-coder-q4km` | 1881.2 | 42.3 | 3 | 83.3% | 100.0% (5/5) | 70.0% (14/20) | 96.0% (48/50) |
 | `qwen35-9b-glm51-q4km` | 2980.8 | 80.2 | 3 | 90.0% | 100.0% (5/5) | 75.0% (15/20) | 90.0% (45/50) |
 | `qwen35-9b-glm51-distill-q5km` | 2862.7 | 69.2 | 3 | 96.7% | 100.0% (5/5) | 85.0% (17/20) | 92.0% (46/50) |
 | `omnicoder-9b-q4km` | 3089.2 | 77.8 | 3 | 93.3% | 100.0% (5/5) | 95.0% (19/20) | 56.0% (28/50) |
@@ -34,9 +34,7 @@ Speed test now enforces 128k context for newly generated rows (`fit_min_ctx = 13
 | `lfm25-8b-q8` | 9623.9 | 222.3 | 3 | 83.3% | 80.0% (4/5) | 60.0% (12/20) | 96.0% (48/50) |
 | `qwopus35-9b-coder-mtp-q4km` | 2958.0 | 78.6 | 3 | 91.7% | 90.0% (4/5) | 75.0% (15/20) | 92.0% (46/50) |
 
-Notable failures: `lfm25-8b-q6km` and `lfm25-8b-q8` each failed one multi-tool case, `T28` (`send_email` + `create_calendar_event`), with llama-server HTTP 500. `gemma4-12b-q5km` failed `T30` (multi-tool: reminder + unit conversion) and `T18` (translate Japanese).
-
-¹ `gemma4-12b-coder-q4km` run used standard (non-expanded) test counts: 15 toolcall tests (no multi-tool cases), 10 HumanEval problems, 15 GSM8K problems. Speed: 1 rep. Not directly comparable to expanded runs on coding/reasoning metrics.
+Notable failures: `lfm25-8b-q6km` and `lfm25-8b-q8` each failed one multi-tool case, `T28` (`send_email` + `create_calendar_event`), with llama-server HTTP 500. `gemma4-12b-q5km` failed `T30` (multi-tool: reminder + unit conversion) and `T18` (translate Japanese). `gemma4-12b-coder-q4km` failed `T05`/`T18` (translate — answered directly instead of calling tool) and `T16` (percent calculation — answered directly) and `T21` (no-tool basic math — called `calculate` when it shouldn't).
 
 ## Model Files
 
