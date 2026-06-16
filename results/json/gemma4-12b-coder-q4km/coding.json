@@ -1,22 +1,38 @@
 {
-  "pass_at_1": 0.9,
-  "n_passed": 9,
-  "n_total": 10,
+  "pass_at_1": 0.7,
+  "n_passed": 14,
+  "n_total": 20,
   "details": [
     {
       "id": "HE/0",
       "name": "has_close_elements",
       "passed": true,
       "error": "",
-      "latency_s": 3.27,
+      "latency_s": 2.53,
       "generated_code": "numbers = sorted(numbers)\nfor i in range(len(numbers) - 1):\n    if numbers[i+1] - numbers[i] < threshold:\n        return True\nreturn False"
+    },
+    {
+      "id": "HE/3",
+      "name": "below_zero",
+      "passed": true,
+      "error": "",
+      "latency_s": 1.89,
+      "generated_code": "balance = 0\nfor op in operations:\n    balance += op\n    if balance < 0:\n        return True\nreturn False"
+    },
+    {
+      "id": "HE/6",
+      "name": "parse_nested_parens",
+      "passed": true,
+      "error": "",
+      "latency_s": 3.67,
+      "generated_code": "result = []\nfor group in paren_string.split():\n    depth = 0\n    max_depth = 0\n    for char in group:\n        if char == '(':\n            depth += 1\n            max_depth = max(max_depth, depth)\n        elif char == ')':\n            depth -= 1\n    result.append(max_depth)\nreturn result"
     },
     {
       "id": "HE/9",
       "name": "rolling_max",
       "passed": true,
       "error": "",
-      "latency_s": 3.17,
+      "latency_s": 2.42,
       "generated_code": "result = []\ncurrent_max = float('-inf')\nfor num in numbers:\n    if num > current_max:\n        current_max = num\n    result.append(current_max)\nreturn result"
     },
     {
@@ -24,15 +40,39 @@
       "name": "all_prefixes",
       "passed": true,
       "error": "",
-      "latency_s": 1.14,
+      "latency_s": 0.9,
       "generated_code": "return [string[:i] for i in range(1, len(string) + 1)]"
+    },
+    {
+      "id": "HE/17",
+      "name": "parse_music",
+      "passed": true,
+      "error": "",
+      "latency_s": 2.56,
+      "generated_code": "tokens = music_string.split()\nmapping = {'o': 4, 'o|': 2, '.|': 1}\nreturn [mapping[token] for token in tokens]"
+    },
+    {
+      "id": "HE/20",
+      "name": "find_closest_elements",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmpnk2giktl.py\", line 18, in <module>\n    assert find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2]) == (2.0, 2.2)\nAssertionError\n",
+      "latency_s": 3.72,
+      "generated_code": "min_pair = (numbers[0], numbers[1])\nmin_diff = abs(numbers[0] - numbers[1])\nfor i in range(len(numbers) - 1):\n    diff = abs(numbers[i] - numbers[i + 1])\n    if diff < min_diff:\n        min_diff = diff\n        min_pair = (numbers[i], numbers[i + 1])\nreturn min_pair"
+    },
+    {
+      "id": "HE/23",
+      "name": "strlen",
+      "passed": false,
+      "error": "  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmp2680r72d.py\", line 9\n    The function should return the number of characters in the string, which is exactly what `len(string)` computes in Python.\n        ^^^^^^^^\nSyntaxError: invalid syntax\n",
+      "latency_s": 1.19,
+      "generated_code": "The function should return the number of characters in the string, which is exactly what `len(string)` computes in Python."
     },
     {
       "id": "HE/24",
       "name": "largest_divisor",
       "passed": true,
       "error": "",
-      "latency_s": 4.14,
+      "latency_s": 3.2,
       "generated_code": "for i in range(2, int(n**0.5) + 1):\n    if n % i == 0:\n        return n // i\nreturn 1"
     },
     {
@@ -40,49 +80,89 @@
       "name": "remove_duplicates",
       "passed": true,
       "error": "",
-      "latency_s": 2.33,
+      "latency_s": 1.82,
       "generated_code": "from collections import Counter\ncounts = Counter(numbers)\nreturn [num for num in numbers if counts[num] == 1]"
+    },
+    {
+      "id": "HE/28",
+      "name": "concatenate",
+      "passed": false,
+      "error": "  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmpafsd_dj6.py\", line 9\n    Join all strings in the list with an empty separator.\n         ^^^\nSyntaxError: invalid syntax\n",
+      "latency_s": 0.94,
+      "generated_code": "Join all strings in the list with an empty separator."
+    },
+    {
+      "id": "HE/32",
+      "name": "poly_zero",
+      "passed": false,
+      "error": "  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmpksn8959m.py\", line 13\n    The function `find_zero` is called with a list of coefficients `xs` representing a polynomial of even degree (i.e. `len(xs)` is even). The doctest `find_zero([1, 2])` evaluates the linear polynomial `1 + 2x`, which has a zero at `x = -0.5`.\n                                                                                                                                                                                         ",
+      "latency_s": 9.5,
+      "generated_code": "The function `find_zero` is called with a list of coefficients `xs` representing a polynomial of even degree (i.e. `len(xs)` is even). The doctest `find_zero([1, 2])` evaluates the linear polynomial `1 + 2x`, which has a zero at `x = -0.5`.\n\nFor a general even-length coefficient list, the polynomial is `xs[0] + xs[1]x + ... + xs[n]x^n` where `n` is odd. The simplest zero that works for all such cases is `x = -1`: when `x = -1`, the terms pair into `(xs[0] - xs[1]) + (xs[2] - xs[3]) + ...`, which"
     },
     {
       "id": "HE/33",
       "name": "sort_third",
       "passed": true,
       "error": "",
-      "latency_s": 4.05,
+      "latency_s": 3.3,
       "generated_code": "values = [l[i] for i in range(len(l)) if i % 3 == 0]\nsorted_values = sorted(values)\nresult = l[:]\nfor i, val in enumerate(sorted_values):\n    result[i * 3] = val\nreturn result"
     },
     {
       "id": "HE/36",
       "name": "fizz_buzz",
       "passed": false,
-      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmp2gt5_9b4.py\", line 19, in <module>\n    assert fizz_buzz(79) == 3\nAssertionError\n",
-      "latency_s": 4.18,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmpg3hfffjh.py\", line 19, in <module>\n    assert fizz_buzz(79) == 3\nAssertionError\n",
+      "latency_s": 3.44,
       "generated_code": "count = 0\nfor i in range(1, n + 1):\n    if (i % 11 == 0 or i % 13 == 0) and '7' in str(i):\n        count += 1\nreturn count"
+    },
+    {
+      "id": "HE/41",
+      "name": "car_race_collision",
+      "passed": false,
+      "error": "  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmp48o5m8a9.py\", line 7\n    Each left-moving car will collide with every right-moving car, so there are n \u00d7 n = n\u00b2 collisions.\n                                                                                  ^\nSyntaxError: invalid character '\u00d7' (U+00D7)\n",
+      "latency_s": 1.17,
+      "generated_code": "Each left-moving car will collide with every right-moving car, so there are n \u00d7 n = n\u00b2 collisions."
     },
     {
       "id": "HE/44",
       "name": "change_base",
       "passed": true,
       "error": "",
-      "latency_s": 4.41,
+      "latency_s": 3.75,
       "generated_code": "if x == 0:\n    return '0'\nresult = ''\nwhile x > 0:\n    digit = x % base\n    result = chr(ord('0') + digit) + result\n    x //= base\nreturn result"
+    },
+    {
+      "id": "HE/50",
+      "name": "encode_shift",
+      "passed": true,
+      "error": "",
+      "latency_s": 3.03,
+      "generated_code": "return ''.join([chr(((ord(ch) - ord('a') - 5) % 26) + ord('a')) if ch.isalpha() and ch.islower() else ch for ch in s])"
     },
     {
       "id": "HE/51",
       "name": "remove_vowels",
       "passed": true,
       "error": "",
-      "latency_s": 1.27,
+      "latency_s": 1.16,
       "generated_code": "vowels = \"aeiouAEIOU\"\nreturn \"\".join(char for char in text if char not in vowels)"
+    },
+    {
+      "id": "HE/58",
+      "name": "common",
+      "passed": true,
+      "error": "",
+      "latency_s": 2.41,
+      "generated_code": "return sorted(set(l1) & set(l2))"
     },
     {
       "id": "HE/62",
       "name": "derivative",
       "passed": true,
       "error": "",
-      "latency_s": 2.83,
+      "latency_s": 2.44,
       "generated_code": "return [i * xs[i] for i in range(1, len(xs))]"
     }
   ],
-  "timestamp": "2026-06-15T05:39:59.288853"
+  "timestamp": "2026-06-16T20:21:37.651643"
 }

@@ -1,27 +1,27 @@
 {
-  "generated": "2026-06-15T05:41:40.255547",
+  "generated": "2026-06-16T20:29:16.819794",
   "models": {
     "gemma4-12b-coder-q4km": {
       "speed": {
-        "pp_tps": 1302.229712,
-        "tg_tps": 30.483507,
+        "pp_tps": 1881.205854,
+        "tg_tps": 42.304364,
         "ngl": 99
       },
       "toolcall": {
-        "tool_accuracy": 0.75,
-        "param_accuracy": 0.6667,
+        "tool_accuracy": 0.8889,
+        "param_accuracy": 0.8148,
         "no_tool_accuracy": 0.6667,
-        "overall_score": 0.7
+        "overall_score": 0.8333
       },
       "coding": {
-        "pass_at_1": 0.9,
-        "n_passed": 9,
-        "n_total": 10
+        "pass_at_1": 0.7,
+        "n_passed": 14,
+        "n_total": 20
       },
       "reasoning": {
-        "accuracy": 0.8667,
-        "n_correct": 13,
-        "n_total": 15
+        "accuracy": 0.96,
+        "n_correct": 48,
+        "n_total": 50
       }
     },
     "gemma4-12b-q4km": {
@@ -68,29 +68,6 @@
         "accuracy": 0.98,
         "n_correct": 49,
         "n_total": 50
-      }
-    },
-    "gemma4-12b-qat-q4kxl": {
-      "speed": {
-        "pp_tps": 2737.366279,
-        "tg_tps": 58.821672,
-        "ngl": 99
-      },
-      "toolcall": {
-        "tool_accuracy": 0.9167,
-        "param_accuracy": 0.9167,
-        "no_tool_accuracy": 0.6667,
-        "overall_score": 0.8667
-      },
-      "coding": {
-        "pass_at_1": 0.4,
-        "n_passed": 4,
-        "n_total": 10
-      },
-      "reasoning": {
-        "accuracy": 0.8,
-        "n_correct": 12,
-        "n_total": 15
       }
     },
     "lfm25-8b-q6km": {

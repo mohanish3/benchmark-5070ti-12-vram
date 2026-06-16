@@ -1,10 +1,10 @@
 {
-  "tool_accuracy": 0.75,
-  "param_accuracy": 0.6667,
+  "tool_accuracy": 0.8889,
+  "param_accuracy": 0.8148,
   "no_tool_accuracy": 0.6667,
-  "overall_score": 0.7,
-  "n_tests": 15,
-  "n_tool_tests": 12,
+  "overall_score": 0.8333,
+  "n_tests": 30,
+  "n_tool_tests": 27,
   "n_no_tool_tests": 3,
   "details": [
     {
@@ -26,7 +26,7 @@
       },
       "score": 1.0,
       "raw_content": "",
-      "latency_s": 1.38
+      "latency_s": 1.13
     },
     {
       "id": "T02",
@@ -47,7 +47,7 @@
       },
       "score": 0.5,
       "raw_content": "",
-      "latency_s": 0.85
+      "latency_s": 0.66
     },
     {
       "id": "T03",
@@ -68,7 +68,7 @@
       },
       "score": 1.0,
       "raw_content": "",
-      "latency_s": 1.21
+      "latency_s": 0.92
     },
     {
       "id": "T04",
@@ -89,7 +89,7 @@
       },
       "score": 1.0,
       "raw_content": "",
-      "latency_s": 0.96
+      "latency_s": 0.65
     },
     {
       "id": "T05",
@@ -103,7 +103,7 @@
       "params_detail": {},
       "score": 0.0,
       "raw_content": "Bonjour.",
-      "latency_s": 0.45
+      "latency_s": 0.36
     },
     {
       "id": "T06",
@@ -128,7 +128,7 @@
       },
       "score": 1.0,
       "raw_content": "",
-      "latency_s": 1.39
+      "latency_s": 0.97
     },
     {
       "id": "T07",
@@ -149,7 +149,7 @@
       },
       "score": 1.0,
       "raw_content": "",
-      "latency_s": 1.02
+      "latency_s": 0.76
     },
     {
       "id": "T08",
@@ -170,7 +170,166 @@
       },
       "score": 1.0,
       "raw_content": "",
-      "latency_s": 1.2
+      "latency_s": 0.89
+    },
+    {
+      "id": "T09",
+      "desc": "send email",
+      "called_tool": "send_email",
+      "called_tools": [
+        "send_email"
+      ],
+      "expected_tool": "send_email",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "to": {
+          "value": "alice@example.com",
+          "pass": true
+        },
+        "subject": {
+          "value": "Project Update",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.13
+    },
+    {
+      "id": "T10",
+      "desc": "create calendar event",
+      "called_tool": "create_calendar_event",
+      "called_tools": [
+        "create_calendar_event"
+      ],
+      "expected_tool": "create_calendar_event",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "title": {
+          "value": "Dentist Appointment",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.04
+    },
+    {
+      "id": "T11",
+      "desc": "read file",
+      "called_tool": "read_file",
+      "called_tools": [
+        "read_file"
+      ],
+      "expected_tool": "read_file",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "path": {
+          "value": "/var/log/app.log",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.73
+    },
+    {
+      "id": "T12",
+      "desc": "random number",
+      "called_tool": "random_number",
+      "called_tools": [
+        "random_number"
+      ],
+      "expected_tool": "random_number",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "min": {
+          "value": 1,
+          "pass": true
+        },
+        "max": {
+          "value": 100,
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.64
+    },
+    {
+      "id": "T13",
+      "desc": "word definition",
+      "called_tool": "get_definition",
+      "called_tools": [
+        "get_definition"
+      ],
+      "expected_tool": "get_definition",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "word": {
+          "value": "ephemeral",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.57
+    },
+    {
+      "id": "T14",
+      "desc": "currency conversion",
+      "called_tool": "convert_currency",
+      "called_tools": [
+        "convert_currency"
+      ],
+      "expected_tool": "convert_currency",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "amount": {
+          "value": 500,
+          "pass": true
+        },
+        "from_currency": {
+          "value": "USD",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.06
+    },
+    {
+      "id": "T15",
+      "desc": "geocode",
+      "called_tool": "geocode",
+      "called_tools": [
+        "geocode"
+      ],
+      "expected_tool": "geocode",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "location": {
+          "value": "Eiffel Tower",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.63
     },
     {
       "id": "T16",
@@ -183,8 +342,8 @@
       "params_correct": false,
       "params_detail": {},
       "score": 0.0,
-      "raw_content": "To find 15 percent of 840, you can multiply 840 by 0.15 (which is the decimal equivalent of 15%).\n\n840 \u00d7 0.15 = 126\n\nSo, 15 percent of 840 is 126.",
-      "latency_s": 2.57
+      "raw_content": "To find 15 percent of 840, you can multiply 840 by 0.15 (which is the decimal form of 15%).\n\n840 \u00d7 0.15 = 126\n\nSo, 15 percent of 840 is 126.",
+      "latency_s": 1.78
     },
     {
       "id": "T17",
@@ -209,7 +368,7 @@
       },
       "score": 1.0,
       "raw_content": "",
-      "latency_s": 1.02
+      "latency_s": 0.71
     },
     {
       "id": "T18",
@@ -223,7 +382,53 @@
       "params_detail": {},
       "score": 0.0,
       "raw_content": "There are several ways to say \"goodbye\" in Japanese, depending on who you are talking to and whether you are leaving or the other person is leaving.\n\n### 1. The most common ways\n*   **Say\u014dnara (\u3055\u3088\u3046\u306a\u3089):** This is the standard \"goodbye\" you learn in textbooks. However, in daily life, it can sound final\u2014like you won't see the person for a long time (similar to \"farewell\").\n*   **Ja, mata (\u3058\u3083\u3001\u307e\u305f):** This is very common in casual conversation. It means \"See you later\" or \"See you soon.\"\n\n### 2. When you are leaving\nIf you are the one leaving and the other person is staying, you use a phrase that means \"I'm heading out\":\n*   **Osaki ni shitsurei shimasu (\u304a\u5148\u306b\u5931\u793c\u3057\u307e\u3059):** Formal \u2014 used in a business setting when leaving the office before others.\n*   **Nukete ikimasu (\u629c\u3051\u3066\u3044\u304d\u307e\u3059):** Casual \u2014 \"I'm heading out now.\"\n\n### 3. When the other person is leaving\nIf the other person is the one leaving, you use a phrase that means \"safe travels\":\n*   **Ki o tsukete (\u6c17\u3092\u3064\u3051\u3066):** Casual \u2014 \"Take care\" or \"Be careful.\"\n*   **Ki o tsukete kaeraremasen ka (\u6c17\u3092\u3064\u3051\u3066\u5e30\u308c\u307e\u3059\u304b):** Formal \u2014 \"Please get home safely.\"\n\n### 4. Time-specific goodbyes\nInstead of a general \"goodbye,\" Japanese people often use a phrase based on when they will see each other next:\n*   **Mata ashita (\u307e\u305f\u660e\u65e5):** See you tomorrow.\n*   **Mata raish\u016b (\u307e\u305f\u6765\u9031):** See you next week.\n*   **Mata raish\u016b-matsu (\u307e\u305f\u6765\u9031\u672b):** See you next weekend.\n*   **Mata ne (\u307e\u305f\u306d):** A friendly \"See ya!\"\n\n### Summary table\n| Situation | Japanese | Romaji | Meaning |\n| :--- | :--- | :--- | :--- |\n| Standard | \u3055\u3088\u3046\u306a\u3089 | Say\u014dnara | Goodbye |\n| Casual | \u3058\u3083\u3001\u307e\u305f | Ja, mata | See you later |\n| Formal (leaving) | \u304a\u5148\u306b\u5931\u793c\u3057\u307e\u3059 | Osaki ni shitsurei",
-      "latency_s": 17.25
+      "latency_s": 11.56
+    },
+    {
+      "id": "T19",
+      "desc": "temperature conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units"
+      ],
+      "expected_tool": "convert_units",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "value": {
+          "value": 37,
+          "pass": true
+        },
+        "from_unit": {
+          "value": "Celsius",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.93
+    },
+    {
+      "id": "T20",
+      "desc": "Sydney time",
+      "called_tool": "get_current_time",
+      "called_tools": [
+        "get_current_time"
+      ],
+      "expected_tool": "get_current_time",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "timezone": {
+          "value": "Australia/Sydney",
+          "pass": true
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 0.62
     },
     {
       "id": "T21",
@@ -239,7 +444,7 @@
       "params_detail": {},
       "score": 0.0,
       "raw_content": "",
-      "latency_s": 0.84
+      "latency_s": 0.64
     },
     {
       "id": "T22",
@@ -253,7 +458,7 @@
       "params_detail": {},
       "score": 1.0,
       "raw_content": "William Shakespeare wrote the play Hamlet.",
-      "latency_s": 0.49
+      "latency_s": 0.39
     },
     {
       "id": "T23",
@@ -267,7 +472,32 @@
       "params_detail": {},
       "score": 1.0,
       "raw_content": "The planets in our solar system, in order from the sun, are:\n\n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Neptune",
-      "latency_s": 1.81
+      "latency_s": 1.36
+    },
+    {
+      "id": "T24",
+      "desc": "optional param",
+      "called_tool": "search_web",
+      "called_tools": [
+        "search_web"
+      ],
+      "expected_tool": "search_web",
+      "expected_tools": null,
+      "tool_correct": true,
+      "params_correct": false,
+      "params_detail": {
+        "query": {
+          "value": "Python tutorials",
+          "pass": true
+        },
+        "max_results": {
+          "value": null,
+          "pass": false
+        }
+      },
+      "score": 0.5,
+      "raw_content": "",
+      "latency_s": 0.6
     },
     {
       "id": "T25",
@@ -288,8 +518,193 @@
       },
       "score": 1.0,
       "raw_content": "",
-      "latency_s": 0.8
+      "latency_s": 0.66
+    },
+    {
+      "id": "T26",
+      "desc": "multi-tool: weather and time",
+      "called_tool": "get_weather",
+      "called_tools": [
+        "get_weather",
+        "get_current_time"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "get_weather",
+        "get_current_time"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "get_weather": {
+          "city": {
+            "value": "Tokyo",
+            "pass": true
+          }
+        },
+        "get_current_time": {
+          "timezone": {
+            "value": "Asia/Tokyo",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.11
+    },
+    {
+      "id": "T27",
+      "desc": "multi-tool: stock and currency",
+      "called_tool": "get_stock_price",
+      "called_tools": [
+        "get_stock_price",
+        "convert_currency"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "get_stock_price",
+        "convert_currency"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "get_stock_price": {
+          "symbol": {
+            "value": "AAPL",
+            "pass": true
+          }
+        },
+        "convert_currency": {
+          "amount": {
+            "value": 100,
+            "pass": true
+          },
+          "from_currency": {
+            "value": "USD",
+            "pass": true
+          },
+          "to_currency": {
+            "value": "EUR",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.56
+    },
+    {
+      "id": "T28",
+      "desc": "multi-tool: email and calendar",
+      "called_tool": "send_email",
+      "called_tools": [
+        "send_email",
+        "create_calendar_event"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "send_email",
+        "create_calendar_event"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "send_email": {
+          "to": {
+            "value": "bob@example.com",
+            "pass": true
+          },
+          "subject": {
+            "value": "Budget Review",
+            "pass": true
+          }
+        },
+        "create_calendar_event": {
+          "title": {
+            "value": "Budget Review Meeting",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 2.17
+    },
+    {
+      "id": "T29",
+      "desc": "multi-tool: geocode and weather",
+      "called_tool": "geocode",
+      "called_tools": [
+        "geocode",
+        "get_weather"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "geocode",
+        "get_weather"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "geocode": {
+          "location": {
+            "value": "Eiffel Tower",
+            "pass": true
+          }
+        },
+        "get_weather": {
+          "city": {
+            "value": "Paris",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.18
+    },
+    {
+      "id": "T30",
+      "desc": "multi-tool: reminder and unit conversion",
+      "called_tool": "convert_units",
+      "called_tools": [
+        "convert_units",
+        "set_reminder"
+      ],
+      "expected_tool": null,
+      "expected_tools": [
+        "convert_units",
+        "set_reminder"
+      ],
+      "tool_correct": true,
+      "params_correct": true,
+      "params_detail": {
+        "convert_units": {
+          "value": {
+            "value": 5,
+            "pass": true
+          },
+          "from_unit": {
+            "value": "miles",
+            "pass": true
+          },
+          "to_unit": {
+            "value": "kilometers",
+            "pass": true
+          }
+        },
+        "set_reminder": {
+          "time": {
+            "value": "6pm",
+            "pass": true
+          }
+        }
+      },
+      "score": 1.0,
+      "raw_content": "",
+      "latency_s": 1.98
     }
   ],
-  "timestamp": "2026-06-15T05:39:26.272705"
+  "timestamp": "2026-06-16T20:20:39.491656"
 }

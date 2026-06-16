@@ -1,14 +1,13 @@
 # Model Benchmark Report
-Generated: 2026-06-15 05:41
+Generated: 2026-06-16 20:29
 
 ## Summary
 
 | Model | PP tok/s | TG tok/s | Tool acc | Param acc | Code pass@1 | GSM8K acc | NGL |
 |-------|----------|----------|----------|-----------|-------------|-----------|-----|
-| gemma4-12b-coder-q4km | 1302 | 30 | 75.0% | 66.7% | 90.0% | 86.7% | 99 |
+| gemma4-12b-coder-q4km | 1881 | 42 | 88.9% | 81.5% | 70.0% | 96.0% | 99 |
 | gemma4-12b-q4km | 2475 | 52 | 92.6% | 88.9% | 30.0% | 98.0% | 99 |
 | gemma4-12b-q5km | 2396 | 47 | 92.6% | 88.9% | 35.0% | 98.0% | 99 |
-| gemma4-12b-qat-q4kxl | 2737 | 59 | 91.7% | 91.7% | 40.0% | 80.0% | 99 |
 | lfm25-8b-q6km | 7668 | 265 | 81.5% | 81.5% | 55.0% | 88.0% | 99 |
 | lfm25-8b-q8 | 9624 | 222 | 81.5% | 81.5% | 60.0% | 96.0% | 99 |
 | omnicoder-9b-q4km | 3089 | 78 | 96.3% | 96.3% | 95.0% | 56.0% | 99 |
@@ -23,10 +22,9 @@ Generated: 2026-06-15 05:41
 
 | Model | PP tok/s | TG tok/s | NGL | Notes |
 |-------|----------|----------|-----|-------|
-| gemma4-12b-coder-q4km | 1302.2 | 30.5 | 99 | Full GPU; 128k ctx |
+| gemma4-12b-coder-q4km | 1881.2 | 42.3 | 99 | Full GPU; 128k ctx |
 | gemma4-12b-q4km | 2474.5 | 52.1 | 99 | Full GPU; 128k ctx |
 | gemma4-12b-q5km | 2396.0 | 46.6 | 99 | Full GPU; 128k ctx |
-| gemma4-12b-qat-q4kxl | 2737.4 | 58.8 | 99 | Full GPU; legacy speed |
 | lfm25-8b-q6km | 7668.2 | 265.3 | 99 | Full GPU; legacy speed |
 | lfm25-8b-q8 | 9623.9 | 222.3 | 99 | Full GPU; 128k ctx |
 | omnicoder-9b-q4km | 3089.2 | 77.8 | 99 | Full GPU; 128k ctx |
@@ -41,10 +39,9 @@ Generated: 2026-06-15 05:41
 
 | Model | Tool acc | Param acc | No-tool acc | Overall |
 |-------|----------|-----------|-------------|---------|
-| gemma4-12b-coder-q4km | 75.0% | 66.7% | 66.7% | 70.0% |
+| gemma4-12b-coder-q4km | 88.9% | 81.5% | 66.7% | 83.3% |
 | gemma4-12b-q4km | 92.6% | 88.9% | 66.7% | 88.3% |
 | gemma4-12b-q5km | 92.6% | 88.9% | 66.7% | 88.3% |
-| gemma4-12b-qat-q4kxl | 91.7% | 91.7% | 66.7% | 86.7% |
 | lfm25-8b-q6km | 81.5% | 81.5% | 100.0% | 83.3% |
 | lfm25-8b-q8 | 81.5% | 81.5% | 100.0% | 83.3% |
 | omnicoder-9b-q4km | 96.3% | 96.3% | 66.7% | 93.3% |
@@ -59,10 +56,9 @@ Generated: 2026-06-15 05:41
 
 | Model | pass@1 | Passed/Total |
 |-------|--------|--------------|
-| gemma4-12b-coder-q4km | 90.0% | 9/10 |
+| gemma4-12b-coder-q4km | 70.0% | 14/20 |
 | gemma4-12b-q4km | 30.0% | 6/20 |
 | gemma4-12b-q5km | 35.0% | 7/20 |
-| gemma4-12b-qat-q4kxl | 40.0% | 4/10 |
 | lfm25-8b-q6km | 55.0% | 11/20 |
 | lfm25-8b-q8 | 60.0% | 12/20 |
 | omnicoder-9b-q4km | 95.0% | 19/20 |
@@ -77,10 +73,9 @@ Generated: 2026-06-15 05:41
 
 | Model | Accuracy | Correct/Total |
 |-------|----------|---------------|
-| gemma4-12b-coder-q4km | 86.7% | 13/15 |
+| gemma4-12b-coder-q4km | 96.0% | 48/50 |
 | gemma4-12b-q4km | 98.0% | 49/50 |
 | gemma4-12b-q5km | 98.0% | 49/50 |
-| gemma4-12b-qat-q4kxl | 80.0% | 12/15 |
 | lfm25-8b-q6km | 88.0% | 44/50 |
 | lfm25-8b-q8 | 96.0% | 48/50 |
 | omnicoder-9b-q4km | 56.0% | 28/50 |
