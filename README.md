@@ -33,6 +33,9 @@ Speed test now enforces 128k context for newly generated rows (`fit_min_ctx = 13
 | `lfm25-8b-q6km` | 7668.2 | 265.3 | 3 | 83.3% | 80.0% (4/5) | 55.0% (11/20) | 88.0% (44/50) |
 | `lfm25-8b-q8` | 9623.9 | 222.3 | 3 | 83.3% | 80.0% (4/5) | 60.0% (12/20) | 96.0% (48/50) |
 | `qwopus35-9b-coder-mtp-q4km` | 2958.0 | 78.6 | 3 | 91.7% | 90.0% (4/5) | 75.0% (15/20) | 92.0% (46/50) |
+| `vibethinker-3b-bf16` | 5453.3 | 71.2 | 3 | 10.0% | 0.0% (0/5) | 5.0% (1/20) | 100.0% (50/50) |
+
+VibeThinker note: `vibethinker-3b-bf16` reasoned perfectly on GSM8K but did not emit callable tool markup in tool tests, so tool and param accuracy were 0%.
 
 Notable failures: `lfm25-8b-q6km` and `lfm25-8b-q8` each failed one multi-tool case, `T28` (`send_email` + `create_calendar_event`), with llama-server HTTP 500. `gemma4-12b-q5km` failed `T30` (multi-tool: reminder + unit conversion) and `T18` (translate Japanese). `gemma4-12b-coder-q4km` failed `T05`/`T18` (translate — answered directly instead of calling tool) and `T16` (percent calculation — answered directly) and `T21` (no-tool basic math — called `calculate` when it shouldn't).
 
@@ -67,6 +70,8 @@ Model files are not stored in this repo. Put GGUF files under a model root with 
       LFM2.5-8B-A1B-Q8_0.gguf
     qwopus35-9b-coder-q4km/
       Qwopus3.5-9B-Coder-MTP-Q4_K_M.gguf
+    vibethinker-3b-bf16/
+      VibeThinker-3B-BF16.gguf
 ```
 
 Create `.env` from `.env.example`:
@@ -100,7 +105,7 @@ Excluded from benchmark set:
 ## Run
 
 ```powershell
-.\benchmarks\run_benchmark.ps1 -Expanded -ForceRerun -ModelsOnly "gemma4-12b-q4km,qwen35-9b-glm51-q4km,qwen35-9b-glm51-distill-q5km,omnicoder-9b-q4km,omnicoder-9b-q5km,qwen35-9b-opus-distill-q4km,qwen35-9b-opus-distill-q5km,lfm25-8b-q6km,lfm25-8b-q8,qwopus35-9b-coder-mtp-q4km"
+.\benchmarks\run_benchmark.ps1 -Expanded -ForceRerun -ModelsOnly "gemma4-12b-q4km,qwen35-9b-glm51-q4km,qwen35-9b-glm51-distill-q5km,omnicoder-9b-q4km,omnicoder-9b-q5km,qwen35-9b-opus-distill-q4km,qwen35-9b-opus-distill-q5km,lfm25-8b-q6km,lfm25-8b-q8,qwopus35-9b-coder-mtp-q4km,vibethinker-3b-bf16"
 ```
 
 Generated run output goes under `benchmarks/results/<model>/`.
