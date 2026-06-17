@@ -54,8 +54,9 @@ if (-not $env:MODEL_ROOT) {
 $MODEL_ROOT = $env:MODEL_ROOT
 $MODELS_DIR = Join-Path $MODEL_ROOT "bench-models"
 
-$SM120_BIN  = Join-Path $ROOT "tools\llama.cpp-sm120-src\build-sm120\bin\Release"
-$CUDA_BIN   = Join-Path $ROOT "tools\llama-cpp-cuda-b9509"
+$TOOLS_ROOT = if ($env:LLAMA_TOOLS_ROOT) { $env:LLAMA_TOOLS_ROOT } else { Join-Path $ROOT "tools" }
+$SM120_BIN  = Join-Path $TOOLS_ROOT "llama.cpp-sm120-src\build-sm120\bin\Release"
+$CUDA_BIN   = Join-Path $TOOLS_ROOT "llama-cpp-cuda-b9509"
 $LLAMA_SRV  = Join-Path $SM120_BIN "llama-server.exe"
 $LLAMA_BNH  = Join-Path $CUDA_BIN  "llama-bench.exe"
 
@@ -63,6 +64,15 @@ $LLAMA_PORT = 8090
 $LLAMA_HOST = "127.0.0.1"
 
 $MODELS = @(
+    @{
+        id          = "vibethinker-3b-bf16"
+        display     = "WeiboAI/VibeThinker-3B BF16"
+        file        = "vibethinker-3b-bf16\VibeThinker-3B.BF16.gguf"
+        ngl         = 99
+        ctx         = 131072
+        threads     = 8
+        cpu_offload = $false
+    },
     @{
         id          = "omnicoder-9b-q4km"
         display     = "Tesslate/OmniCoder-9B"
@@ -76,6 +86,15 @@ $MODELS = @(
         id          = "omnicoder-9b-q5km"
         display     = "Tesslate/OmniCoder-9B Q5_K_M"
         file        = "omnicoder-9b-q5km\omnicoder-9b-q5_k_m.gguf"
+        ngl         = 99
+        ctx         = 131072
+        threads     = 8
+        cpu_offload = $false
+    },
+    @{
+        id          = "omnicoder-9b-q6k"
+        display     = "Tesslate/OmniCoder-9B Q6_K"
+        file        = "omnicoder-9b-q6k\omnicoder-9b-q6_k.gguf"
         ngl         = 99
         ctx         = 131072
         threads     = 8

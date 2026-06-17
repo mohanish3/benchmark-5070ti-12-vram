@@ -5,6 +5,7 @@ Writes JSON: {model, pp_tps, tg_tps, pp_ms, tg_ms, ngl, ctx, timestamp}
 """
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -12,9 +13,10 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
+TOOLS_ROOT = Path(os.environ.get("LLAMA_TOOLS_ROOT", ROOT / "tools"))
 # llama-bench lives in the CUDA b9509 build (SM120 build only compiled llama-server)
-CUDA_BENCH = ROOT / "tools" / "llama-cpp-cuda-b9509" / "llama-bench.exe"
-SM120_BENCH = ROOT / "tools" / "llama.cpp-sm120-src" / "build-sm120" / "bin" / "Release" / "llama-bench.exe"
+CUDA_BENCH = TOOLS_ROOT / "llama-cpp-cuda-b9509" / "llama-bench.exe"
+SM120_BENCH = TOOLS_ROOT / "llama.cpp-sm120-src" / "build-sm120" / "bin" / "Release" / "llama-bench.exe"
 
 def find_llama_bench() -> Path:
     for candidate in (CUDA_BENCH, SM120_BENCH):

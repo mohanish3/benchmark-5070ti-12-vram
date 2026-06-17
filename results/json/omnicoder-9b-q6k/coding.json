@@ -1,0 +1,168 @@
+{
+  "pass_at_1": 0.7,
+  "n_passed": 14,
+  "n_total": 20,
+  "details": [
+    {
+      "id": "HE/0",
+      "name": "has_close_elements",
+      "passed": true,
+      "error": "",
+      "latency_s": 44.59,
+      "generated_code": "for i in range(len(numbers)):\n    for j in range(i + 1, len(numbers)):\n        if abs(numbers[i] - numbers[j]) < threshold:\n            return True\nreturn False"
+    },
+    {
+      "id": "HE/3",
+      "name": "below_zero",
+      "passed": true,
+      "error": "",
+      "latency_s": 21.79,
+      "generated_code": "balance = 0\nfor op in operations:\n    balance += op\n    if balance < 0:\n        return True\nreturn False"
+    },
+    {
+      "id": "HE/6",
+      "name": "parse_nested_parens",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmp_ybuz5wx.py\", line 11, in <module>\n    assert parse_nested_parens('(()()) ((())) () ((())(()))') == [2, 3, 1, 3]\nAssertionError\n",
+      "latency_s": 161.62,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/9",
+      "name": "rolling_max",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmpeyx3tflw.py\", line 11, in <module>\n    assert rolling_max([]) == []\nAssertionError\n",
+      "latency_s": 160.22,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/14",
+      "name": "all_prefixes",
+      "passed": true,
+      "error": "",
+      "latency_s": 26.84,
+      "generated_code": "return [string[:i] for i in range(1, len(string) + 1)]"
+    },
+    {
+      "id": "HE/17",
+      "name": "parse_music",
+      "passed": true,
+      "error": "",
+      "latency_s": 45.78,
+      "generated_code": "result = []\nfor note in music_string.split():\n    if note == 'o':\n        result.append(4)\n    elif note == 'o|':\n        result.append(2)\n    elif note == '.|':\n        result.append(1)\nreturn result"
+    },
+    {
+      "id": "HE/20",
+      "name": "find_closest_elements",
+      "passed": true,
+      "error": "",
+      "latency_s": 65.56,
+      "generated_code": "sorted_numbers = sorted(numbers)\nmin_diff = float('inf')\nclosest_pair = (sorted_numbers[0], sorted_numbers[1])\n\nfor i in range(len(sorted_numbers) - 1):\n    diff = sorted_numbers[i + 1] - sorted_numbers[i]\n    if diff < min_diff:\n        min_diff = diff\n        closest_pair = (sorted_numbers[i], sorted_numbers[i + 1])\n\nreturn closest_pair"
+    },
+    {
+      "id": "HE/23",
+      "name": "strlen",
+      "passed": true,
+      "error": "",
+      "latency_s": 10.31,
+      "generated_code": "return len(string)"
+    },
+    {
+      "id": "HE/24",
+      "name": "largest_divisor",
+      "passed": true,
+      "error": "",
+      "latency_s": 51.54,
+      "generated_code": "if n <= 1:\n    return 1\nfor i in range(2, int(n**0.5) + 1):\n    if n % i == 0:\n        return n // i\nreturn 1"
+    },
+    {
+      "id": "HE/26",
+      "name": "remove_duplicates",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmpwngtflw0.py\", line 11, in <module>\n    assert remove_duplicates([]) == []\nAssertionError\n",
+      "latency_s": 160.64,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/28",
+      "name": "concatenate",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmp3z3d3bng.py\", line 11, in <module>\n    assert concatenate([]) == ''\nAssertionError\n",
+      "latency_s": 160.35,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/32",
+      "name": "poly_zero",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmp0lqwnxup.py\", line 16, in <module>\n    assert math.isclose(poly([1, 2], find_zero([1, 2])), 0, abs_tol=1e-3)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmp0lqwnxup.py\", line 4, in poly\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n                        ^^^^^^^^^^^^^^\nTypeError: must be real number, not NoneType\n",
+      "latency_s": 160.86,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/33",
+      "name": "sort_third",
+      "passed": true,
+      "error": "",
+      "latency_s": 50.03,
+      "generated_code": "result = l.copy()\nindices = [i for i in range(len(l)) if i % 3 == 0]\nvalues = sorted([l[i] for i in indices])\nfor i, idx in enumerate(indices):\n    result[idx] = values[i]\nreturn result"
+    },
+    {
+      "id": "HE/36",
+      "name": "fizz_buzz",
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\MOHANI~1\\AppData\\Local\\Temp\\tmps3orx22f.py\", line 13, in <module>\n    assert fizz_buzz(50) == 0\nAssertionError\n",
+      "latency_s": 160.83,
+      "generated_code": ""
+    },
+    {
+      "id": "HE/41",
+      "name": "car_race_collision",
+      "passed": true,
+      "error": "",
+      "latency_s": 34.64,
+      "generated_code": "return n * n"
+    },
+    {
+      "id": "HE/44",
+      "name": "change_base",
+      "passed": true,
+      "error": "",
+      "latency_s": 57.73,
+      "generated_code": "if x == 0:\n    return '0'\nresult = []\nwhile x > 0:\n    result.append(str(x % base))\n    x //= base\nreturn ''.join(reversed(result))"
+    },
+    {
+      "id": "HE/50",
+      "name": "encode_shift",
+      "passed": true,
+      "error": "",
+      "latency_s": 62.34,
+      "generated_code": "return ''.join([chr(((ord(ch) - 5 - ord('a')) % 26) + ord('a')) if ch.isalpha() and ch.islower() else ch for ch in s])"
+    },
+    {
+      "id": "HE/51",
+      "name": "remove_vowels",
+      "passed": true,
+      "error": "",
+      "latency_s": 27.58,
+      "generated_code": "vowels = 'aeiouAEIOU'\nreturn ''.join(char for char in text if char not in vowels)"
+    },
+    {
+      "id": "HE/58",
+      "name": "common",
+      "passed": true,
+      "error": "",
+      "latency_s": 27.8,
+      "generated_code": "return sorted(set(l1) & set(l2))"
+    },
+    {
+      "id": "HE/62",
+      "name": "derivative",
+      "passed": true,
+      "error": "",
+      "latency_s": 34.28,
+      "generated_code": "if len(xs) <= 1:\n    return []\nreturn [i * xs[i] for i in range(1, len(xs))]"
+    }
+  ],
+  "timestamp": "2026-06-17T18:54:48.030161"
+}
