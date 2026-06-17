@@ -208,5 +208,26 @@
     "reasoning_accuracy": 0.92,
     "reasoning_correct": 46,
     "reasoning_total": 50
+  },
+  {
+    "model": "vibethinker-3b-bf16",
+    "pp_tps": 5453.258701,
+    "tg_tps": 71.188015,
+    "speed_reps": 3,
+    "ctx": 131072,
+    "fit_min_ctx": 131072,
+    "tool_overall": 0.1,
+    "tool_accuracy": 0.0,
+    "param_accuracy": 0.0,
+    "no_tool_accuracy": 1.0,
+    "multi_tool_score": 0.0,
+    "multi_tool_passed": 0,
+    "multi_tool_total": 5,
+    "coding_pass_at_1": 0.05,
+    "coding_passed": 1,
+    "coding_total": 20,
+    "reasoning_accuracy": 1.0,
+    "reasoning_correct": 50,
+    "reasoning_total": 50
   }
 ]
