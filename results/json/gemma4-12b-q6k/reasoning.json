@@ -1,6 +1,6 @@
 {
-  "accuracy": 0.76,
-  "n_correct": 38,
+  "accuracy": 0.98,
+  "n_correct": 49,
   "n_total": 50,
   "details": [
     {
@@ -9,8 +9,8 @@
       "gt": "18",
       "pred": "18",
       "correct": true,
-      "latency_s": 16.09,
-      "response_len": 620
+      "latency_s": 28.39,
+      "response_len": 819
     },
     {
       "idx": 1,
@@ -18,17 +18,17 @@
       "gt": "3",
       "pred": "3",
       "correct": true,
-      "latency_s": 11.56,
-      "response_len": 356
+      "latency_s": 18.7,
+      "response_len": 574
     },
     {
       "idx": 2,
       "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
       "gt": "70000",
-      "pred": null,
-      "correct": false,
-      "latency_s": 35.53,
-      "response_len": 0
+      "pred": "70000",
+      "correct": true,
+      "latency_s": 35.39,
+      "response_len": 811
     },
     {
       "idx": 3,
@@ -36,8 +36,8 @@
       "gt": "540",
       "pred": "540",
       "correct": true,
-      "latency_s": 12.81,
-      "response_len": 480
+      "latency_s": 29.23,
+      "response_len": 920
     },
     {
       "idx": 4,
@@ -45,8 +45,8 @@
       "gt": "20",
       "pred": "20",
       "correct": true,
-      "latency_s": 18.16,
-      "response_len": 797
+      "latency_s": 29.64,
+      "response_len": 823
     },
     {
       "idx": 5,
@@ -54,8 +54,8 @@
       "gt": "64",
       "pred": "64",
       "correct": true,
-      "latency_s": 25.74,
-      "response_len": 1056
+      "latency_s": 40.91,
+      "response_len": 1082
     },
     {
       "idx": 6,
@@ -63,26 +63,26 @@
       "gt": "260",
       "pred": "260",
       "correct": true,
-      "latency_s": 15.34,
-      "response_len": 719
+      "latency_s": 25.79,
+      "response_len": 752
     },
     {
       "idx": 7,
       "question": "Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Windows forces a restart to install updates, which takes 20 minutes. Then Carla has ",
       "gt": "160",
-      "pred": null,
-      "correct": false,
-      "latency_s": 36.42,
-      "response_len": 0
+      "pred": "160",
+      "correct": true,
+      "latency_s": 39.27,
+      "response_len": 1090
     },
     {
       "idx": 8,
       "question": "John drives for 3 hours at a speed of 60 mph and then turns around because he realizes he forgot something very important at home.  He tries to get home in 4 hours but spends the first 2 hours in stan",
       "gt": "45",
-      "pred": "135",
-      "correct": false,
-      "latency_s": 37.45,
-      "response_len": 1274
+      "pred": "45",
+      "correct": true,
+      "latency_s": 43.91,
+      "response_len": 1227
     },
     {
       "idx": 9,
@@ -90,17 +90,17 @@
       "gt": "460",
       "pred": "460",
       "correct": true,
-      "latency_s": 19.8,
-      "response_len": 986
+      "latency_s": 31.09,
+      "response_len": 873
     },
     {
       "idx": 10,
       "question": "A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many as the downloads in the first month, but then reduced by 30% in the third month. ",
       "gt": "366",
-      "pred": null,
-      "correct": false,
-      "latency_s": 36.94,
-      "response_len": 0
+      "pred": "366",
+      "correct": true,
+      "latency_s": 34.67,
+      "response_len": 943
     },
     {
       "idx": 11,
@@ -108,17 +108,17 @@
       "gt": "694",
       "pred": "694",
       "correct": true,
-      "latency_s": 17.28,
-      "response_len": 508
+      "latency_s": 36.67,
+      "response_len": 828
     },
     {
       "idx": 12,
       "question": "Carlos is planting a lemon tree. The tree will cost $90 to plant. Each year it will grow 7 lemons, which he can sell for $1.5 each. It costs $3 a year to water and feed the tree. How many years will i",
       "gt": "13",
-      "pred": null,
+      "pred": "12",
       "correct": false,
-      "latency_s": 36.89,
-      "response_len": 0
+      "latency_s": 59.36,
+      "response_len": 1682
     },
     {
       "idx": 13,
@@ -126,8 +126,8 @@
       "gt": "18",
       "pred": "18",
       "correct": true,
-      "latency_s": 29.92,
-      "response_len": 1131
+      "latency_s": 46.67,
+      "response_len": 1073
     },
     {
       "idx": 14,
@@ -135,8 +135,8 @@
       "gt": "60",
       "pred": "60",
       "correct": true,
-      "latency_s": 36.63,
-      "response_len": 991
+      "latency_s": 39.88,
+      "response_len": 976
     },
     {
       "idx": 15,
@@ -144,8 +144,8 @@
       "gt": "125",
       "pred": "125",
       "correct": true,
-      "latency_s": 22.62,
-      "response_len": 713
+      "latency_s": 28.6,
+      "response_len": 701
     },
     {
       "idx": 16,
@@ -153,8 +153,8 @@
       "gt": "230",
       "pred": "230",
       "correct": true,
-      "latency_s": 25.01,
-      "response_len": 703
+      "latency_s": 23.76,
+      "response_len": 737
     },
     {
       "idx": 17,
@@ -162,8 +162,8 @@
       "gt": "57500",
       "pred": "57500",
       "correct": true,
-      "latency_s": 20.04,
-      "response_len": 753
+      "latency_s": 44.53,
+      "response_len": 1082
     },
     {
       "idx": 18,
@@ -171,8 +171,8 @@
       "gt": "7",
       "pred": "7",
       "correct": true,
-      "latency_s": 21.39,
-      "response_len": 480
+      "latency_s": 27.35,
+      "response_len": 746
     },
     {
       "idx": 19,
@@ -180,17 +180,17 @@
       "gt": "6",
       "pred": "6",
       "correct": true,
-      "latency_s": 36.36,
-      "response_len": 1154
+      "latency_s": 36.62,
+      "response_len": 1193
     },
     {
       "idx": 20,
       "question": "I have 10 liters of orange drink that are two-thirds water and I wish to add it to 15 liters of pineapple drink that is three-fifths water. But as I pour it, I spill one liter of the orange drink. How",
       "gt": "15",
-      "pred": null,
-      "correct": false,
-      "latency_s": 37.1,
-      "response_len": 0
+      "pred": "15",
+      "correct": true,
+      "latency_s": 51.68,
+      "response_len": 1586
     },
     {
       "idx": 21,
@@ -198,8 +198,8 @@
       "gt": "14",
       "pred": "14",
       "correct": true,
-      "latency_s": 17.96,
-      "response_len": 692
+      "latency_s": 35.25,
+      "response_len": 1056
     },
     {
       "idx": 22,
@@ -207,8 +207,8 @@
       "gt": "7",
       "pred": "7",
       "correct": true,
-      "latency_s": 17.28,
-      "response_len": 621
+      "latency_s": 29.38,
+      "response_len": 749
     },
     {
       "idx": 23,
@@ -216,17 +216,17 @@
       "gt": "8",
       "pred": "8",
       "correct": true,
-      "latency_s": 13.01,
-      "response_len": 537
+      "latency_s": 20.3,
+      "response_len": 613
     },
     {
       "idx": 24,
       "question": "Kyle bought last year's best-selling book for $19.50. This is with a 25% discount from the original price. What was the original price of the book?",
       "gt": "26",
-      "pred": "26",
+      "pred": "26.00",
       "correct": true,
-      "latency_s": 18.45,
-      "response_len": 1027
+      "latency_s": 45.91,
+      "response_len": 1024
     },
     {
       "idx": 25,
@@ -234,8 +234,8 @@
       "gt": "2",
       "pred": "2",
       "correct": true,
-      "latency_s": 18.68,
-      "response_len": 874
+      "latency_s": 39.54,
+      "response_len": 1026
     },
     {
       "idx": 26,
@@ -243,8 +243,8 @@
       "gt": "243",
       "pred": "243",
       "correct": true,
-      "latency_s": 23.21,
-      "response_len": 961
+      "latency_s": 59.16,
+      "response_len": 1171
     },
     {
       "idx": 27,
@@ -252,8 +252,8 @@
       "gt": "16",
       "pred": "16",
       "correct": true,
-      "latency_s": 21.64,
-      "response_len": 805
+      "latency_s": 21.79,
+      "response_len": 630
     },
     {
       "idx": 28,
@@ -261,8 +261,8 @@
       "gt": "25",
       "pred": "25",
       "correct": true,
-      "latency_s": 31.72,
-      "response_len": 783
+      "latency_s": 38.9,
+      "response_len": 1068
     },
     {
       "idx": 29,
@@ -270,8 +270,8 @@
       "gt": "104",
       "pred": "104",
       "correct": true,
-      "latency_s": 16.21,
-      "response_len": 583
+      "latency_s": 29.52,
+      "response_len": 762
     },
     {
       "idx": 30,
@@ -279,8 +279,8 @@
       "gt": "109",
       "pred": "109",
       "correct": true,
-      "latency_s": 19.95,
-      "response_len": 642
+      "latency_s": 35.17,
+      "response_len": 797
     },
     {
       "idx": 31,
@@ -288,8 +288,8 @@
       "gt": "80",
       "pred": "80",
       "correct": true,
-      "latency_s": 16.72,
-      "response_len": 412
+      "latency_s": 32.56,
+      "response_len": 807
     },
     {
       "idx": 32,
@@ -297,8 +297,8 @@
       "gt": "35",
       "pred": "35",
       "correct": true,
-      "latency_s": 13.87,
-      "response_len": 455
+      "latency_s": 18.36,
+      "response_len": 519
     },
     {
       "idx": 33,
@@ -306,8 +306,8 @@
       "gt": "70",
       "pred": "70",
       "correct": true,
-      "latency_s": 16.69,
-      "response_len": 741
+      "latency_s": 39.32,
+      "response_len": 924
     },
     {
       "idx": 34,
@@ -315,8 +315,8 @@
       "gt": "23",
       "pred": "23",
       "correct": true,
-      "latency_s": 12.79,
-      "response_len": 538
+      "latency_s": 24.24,
+      "response_len": 641
     },
     {
       "idx": 35,
@@ -324,8 +324,8 @@
       "gt": "9",
       "pred": "9",
       "correct": true,
-      "latency_s": 15.42,
-      "response_len": 507
+      "latency_s": 27.89,
+      "response_len": 709
     },
     {
       "idx": 36,
@@ -333,53 +333,53 @@
       "gt": "75",
       "pred": "75",
       "correct": true,
-      "latency_s": 31.07,
-      "response_len": 813
+      "latency_s": 30.53,
+      "response_len": 747
     },
     {
       "idx": 37,
       "question": "John plans to sell all his toys and use the money to buy video games. He has 13 lego sets and he sells them for $15 each. He ends up buying 8 video games for $20 each and has $5 left. How many lego se",
       "gt": "2",
-      "pred": null,
-      "correct": false,
-      "latency_s": 37.24,
-      "response_len": 0
+      "pred": "2",
+      "correct": true,
+      "latency_s": 64.64,
+      "response_len": 1794
     },
     {
       "idx": 38,
       "question": "John runs 60 miles a week. He runs 3 days a week.  He runs 3 hours the first day and half as much the other two days he runs.  How fast does he run?",
       "gt": "10",
-      "pred": null,
-      "correct": false,
-      "latency_s": 37.89,
-      "response_len": 0
+      "pred": "10",
+      "correct": true,
+      "latency_s": 24.95,
+      "response_len": 630
     },
     {
       "idx": 39,
       "question": "Dana can run at a rate of speed four times faster than she can walk, but she can skip at a rate of speed that is half as fast as she can run. If she can skip at 3 miles per hour, how many miles can sh",
       "gt": "18",
-      "pred": null,
-      "correct": false,
-      "latency_s": 36.59,
-      "response_len": 0
+      "pred": "18",
+      "correct": true,
+      "latency_s": 42.46,
+      "response_len": 1292
     },
     {
       "idx": 40,
       "question": "Brandon's iPhone is four times as old as Ben's iPhone. Ben's iPhone is two times older than Suzy's iPhone. If Suzy\u2019s iPhone is 1 year old, how old is Brandon\u2019s iPhone?",
       "gt": "8",
-      "pred": null,
-      "correct": false,
-      "latency_s": 38.37,
-      "response_len": 0
+      "pred": "8",
+      "correct": true,
+      "latency_s": 23.59,
+      "response_len": 634
     },
     {
       "idx": 41,
       "question": "The great dragon, Perg, sat high atop mount Farbo, breathing fire upon anything within a distance of 1000 feet.  Polly could throw the gold javelin, the only known weapon that could sleigh the dragon,",
       "gt": "200",
-      "pred": null,
-      "correct": false,
-      "latency_s": 37.11,
-      "response_len": 0
+      "pred": "200",
+      "correct": true,
+      "latency_s": 40.33,
+      "response_len": 1229
     },
     {
       "idx": 42,
@@ -387,8 +387,8 @@
       "gt": "26",
       "pred": "26",
       "correct": true,
-      "latency_s": 13.17,
-      "response_len": 628
+      "latency_s": 25.3,
+      "response_len": 756
     },
     {
       "idx": 43,
@@ -396,8 +396,8 @@
       "gt": "48",
       "pred": "48",
       "correct": true,
-      "latency_s": 30.36,
-      "response_len": 912
+      "latency_s": 45.31,
+      "response_len": 1010
     },
     {
       "idx": 44,
@@ -405,17 +405,17 @@
       "gt": "20",
       "pred": "20",
       "correct": true,
-      "latency_s": 26.1,
-      "response_len": 835
+      "latency_s": 31.36,
+      "response_len": 844
     },
     {
       "idx": 45,
       "question": "Meredith is a freelance blogger who writes about health topics and submits to clients each day as her permanent job. A blog article takes an average of 4 hours to research and write about. Last week, ",
       "gt": "104",
-      "pred": null,
-      "correct": false,
-      "latency_s": 42.44,
-      "response_len": 0
+      "pred": "104",
+      "correct": true,
+      "latency_s": 36.3,
+      "response_len": 1188
     },
     {
       "idx": 46,
@@ -423,8 +423,8 @@
       "gt": "163",
       "pred": "163",
       "correct": true,
-      "latency_s": 18.76,
-      "response_len": 845
+      "latency_s": 35.42,
+      "response_len": 960
     },
     {
       "idx": 47,
@@ -432,8 +432,8 @@
       "gt": "800",
       "pred": "800",
       "correct": true,
-      "latency_s": 25.05,
-      "response_len": 848
+      "latency_s": 44.7,
+      "response_len": 1142
     },
     {
       "idx": 48,
@@ -441,8 +441,8 @@
       "gt": "8",
       "pred": "8",
       "correct": true,
-      "latency_s": 11.58,
-      "response_len": 464
+      "latency_s": 24.71,
+      "response_len": 734
     },
     {
       "idx": 49,
@@ -450,9 +450,9 @@
       "gt": "30",
       "pred": "30",
       "correct": true,
-      "latency_s": 18.64,
-      "response_len": 940
+      "latency_s": 34.86,
+      "response_len": 959
     }
   ],
-  "timestamp": "2026-06-18T14:21:09.986148"
+  "timestamp": "2026-06-18T15:48:52.877818"
 }

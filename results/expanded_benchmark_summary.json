@@ -42,6 +42,27 @@
     "reasoning_total": 50
   },
   {
+    "model": "gemma4-12b-q6k",
+    "pp_tps": 1474.13477,
+    "tg_tps": 36.515109,
+    "speed_reps": 3,
+    "ctx": 131072,
+    "fit_min_ctx": 131072,
+    "tool_overall": 0.8833,
+    "tool_accuracy": 0.9259,
+    "param_accuracy": 0.8889,
+    "no_tool_accuracy": 0.6667,
+    "multi_tool_score": 0.8,
+    "multi_tool_passed": 4,
+    "multi_tool_total": 5,
+    "coding_pass_at_1": 0.3,
+    "coding_passed": 6,
+    "coding_total": 20,
+    "reasoning_accuracy": 0.98,
+    "reasoning_correct": 49,
+    "reasoning_total": 50
+  },
+  {
     "model": "gemma4-12b-coder-q4km",
     "pp_tps": 1881.205854,
     "tg_tps": 42.304364,
@@ -148,8 +169,8 @@
   },
   {
     "model": "omnicoder-9b-q6k",
-    "pp_tps": 2659.551853,
-    "tg_tps": 62.500801,
+    "pp_tps": 2786.325319,
+    "tg_tps": 64.641373,
     "speed_reps": 3,
     "ctx": 131072,
     "fit_min_ctx": 131072,
